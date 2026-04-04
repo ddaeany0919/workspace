@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="common.android.isp.interface-V1-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/mobis/hardware/interfaces/camera/isp/oem/aidl/common.android.isp.interface-V1-java/android_common/turbine-combined/common.android.isp.interface-V1-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../out/soong/.intermediates/vendor/mobis/hardware/interfaces/camera/isp/oem/aidl/common.android.isp.interface-V1-java-source/gen" />
+    </SOURCES>
+  </library>
+</component>

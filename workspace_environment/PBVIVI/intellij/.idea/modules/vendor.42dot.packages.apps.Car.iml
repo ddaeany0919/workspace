@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../vendor/42dot/packages/apps/Car">
+    
+  
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="packages.services" />
+  </component>
+</module>

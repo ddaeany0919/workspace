@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.core.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.graphic.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.graphic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.libs.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.media.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.packages.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.base.services.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.base.services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.layoutlib.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.layoutlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.libs.modules-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.libs.modules-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.opt.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.opt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/androidFramework/intellij.iml" filepath="$PROJECT_DIR$/.idea/androidFramework/intellij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libart.iml" filepath="$PROJECT_DIR$/.idea/modules/libart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.apps.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.inputmethods.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.inputmethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.providers.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.providers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.screensavers.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.screensavers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.services.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.wallpapers.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.wallpapers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/packages.modules.iml" filepath="$PROJECT_DIR$/.idea/modules/packages.modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.frameworks.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.frameworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Apps.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.ControlCenter.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.ControlCenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Launcher.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Notification.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.Notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.SystemUI.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.apps.Car.SystemUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.services.Car.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.packages.services.Car.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.mobis.proprietary.frameworks.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.mobis.proprietary.frameworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vendor.42dot.packages.apps.Car.iml" filepath="$PROJECT_DIR$/.idea/modules/vendor.42dot.packages.apps.Car.iml" />
+    </modules>
+  </component>
+</project>

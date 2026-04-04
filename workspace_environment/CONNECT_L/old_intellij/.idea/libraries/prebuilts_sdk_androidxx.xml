@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="prebuilts.sdk.androidxx">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/aaos-libs/car-ui-lib-oem-apis.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/arch/core/core-common/2.2.0-alpha01/core-common-2.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/arch/core/core-runtime/2.2.0-alpha01/core-runtime-2.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/asynclayoutinflater/asynclayoutinflater/1.1.0-alpha01/asynclayoutinflater-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/cardview/cardview/1.1.0-alpha01/cardview-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/cursoradapter/cursoradapter/1.1.0-alpha01/cursoradapter-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/drawerlayout/drawerlayout/1.2.0-alpha01/drawerlayout-1.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/dynamicanimation/dynamicanimation/1.1.0-alpha04/dynamicanimation-1.1.0-alpha04-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/gridlayout/gridlayout/1.1.0-alpha01/gridlayout-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/interpolator/interpolator/1.1.0-alpha01/interpolator-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/loader/loader/1.2.0-alpha01/loader-1.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/palette/palette/1.1.0-alpha01/palette-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/percentlayout/percentlayout/1.1.0-alpha01/percentlayout-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/preference/preference/1.2.0-alpha01/preference-1.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/recommendation/recommendation/1.1.0-alpha01/recommendation-1.1.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/remotecallback/remotecallback-processor/1.0.0-alpha02/remotecallback-processor-1.0.0-alpha02-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/remotecallback/remotecallback/1.0.0-alpha02/remotecallback-1.0.0-alpha02-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/slice/slice-builders/1.1.0-alpha02/slice-builders-1.1.0-alpha02-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/slice/slice-core/1.1.0-alpha02/slice-core-1.1.0-alpha02-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/slice/slice-view/1.1.0-alpha02/slice-view-1.1.0-alpha02-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/textclassifier/textclassifier/1.0.0-alpha03/textclassifier-1.0.0-alpha03-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/vectordrawable/vectordrawable-animated/1.2.0-alpha01/vectordrawable-animated-1.2.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/prebuilts/sdk/current/androidx/m2repository/androidx/versionedparcelable/versionedparcelable/1.2.0-alpha01/versionedparcelable-1.2.0-alpha01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

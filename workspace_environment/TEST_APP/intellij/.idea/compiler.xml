@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="BluetoothMusic.app" target="17" />
+      <module name="BluetoothMusic.build-logic.convention.main" target="17" />
+      <module name="BluetoothMusic.build-logic.convention.test" target="17" />
+      <module name="BluetoothMusic.common.ui" target="17" />
+      <module name="BluetoothMusic.data.datasource" target="17" />
+      <module name="BluetoothMusic.data.model" target="17" />
+      <module name="BluetoothMusic.data.repository" target="17" />
+      <module name="BluetoothMusic.domain" target="17" />
+      <module name="BluetoothMusic.feature.btaudio" target="17" />
+      <module name="BvmCamera.app" target="17" />
+      <module name="Cargo.build-logic.convention.main" target="17" />
+      <module name="Cargo.build-logic.convention.test" target="17" />
+      <module name="Cargo.common.test" target="17" />
+      <module name="Cargo.common.ui" target="17" />
+      <module name="Cargo.common.util" target="17" />
+      <module name="Cargo.common.vehicle" target="17" />
+      <module name="Cargo.data.localdatasource" target="17" />
+      <module name="Cargo.data.localiuswdatasource" target="17" />
+      <module name="Cargo.data.model" target="17" />
+      <module name="Cargo.feature.ccw" target="17" />
+      <module name="Cargo.feature.cdw" target="17" />
+      <module name="Cargo.feature.ctw" target="17" />
+      <module name="Cargo.feature.icmc" target="17" />
+      <module name="Cargo.feature.iusw" target="17" />
+      <module name="DMB.app" target="17" />
+      <module name="DMB.build-logic.convention" target="17" />
+      <module name="DMB.build-logic.convention.main" target="17" />
+      <module name="DMB.build-logic.convention.test" target="17" />
+      <module name="DMB.common.ui" target="17" />
+      <module name="DMB.common.utils" target="17" />
+      <module name="DMB.data.manager" target="17" />
+      <module name="DMB.data.model" target="17" />
+      <module name="DMB.data.provider" target="17" />
+      <module name="DMB.data.remote" target="17" />
+      <module name="DMB.data.repository" target="17" />
+      <module name="DMB.service" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.app" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.bluetooth.data.datasource" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.bluetooth.data.model" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.bluetooth.data.repository" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.bluetooth.domain" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.bluetooth.ui" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.core.data" target="17" />
+      <module name="vendor.mobis.packages.apps.BluetoothEng.core.framework" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

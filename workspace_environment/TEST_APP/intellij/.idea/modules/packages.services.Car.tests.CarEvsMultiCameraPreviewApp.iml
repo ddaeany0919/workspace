@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/services/Car/tests/CarEvsMultiCameraPreviewApp">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/tests/CarEvsMultiCameraPreviewApp/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/tests/CarEvsMultiCameraPreviewApp/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="packages.services.Car.car-evs-helper-lib" />
+    <orderEntry type="module" module-name="frameworks.base.graphic" />
+    <orderEntry type="module" module-name="frameworks.base.libs" />
+    <orderEntry type="module" module-name="frameworks.base.media" />
+    <orderEntry type="module" module-name="frameworks.base.opengl" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+    <orderEntry type="module" module-name="frameworks.layoutlib" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.opt" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="library" name="androidx" level="project" />
+  </component>
+</module>

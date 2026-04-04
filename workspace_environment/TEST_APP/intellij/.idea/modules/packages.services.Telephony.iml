@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/services/Telephony">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/EmbmsServiceTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/EmbmsTestDownloadApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/EmbmsTestStreamingApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/GbaTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/ImsTestService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/SmsManagerTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TelephonyManagerTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TelephonyRegistryTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestRcsApp/TestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestRcsApp/aosp_test_rcsclient/javatests" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestRcsApp/aosp_test_rcsclient/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestSliceApp/app/src/androidTest/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestSliceApp/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/testapps/TestSliceApp/app/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/tests/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

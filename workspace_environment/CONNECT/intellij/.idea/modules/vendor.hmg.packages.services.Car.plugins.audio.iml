@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/audio">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/audio/car-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/audio/service/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/audio/service/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="com.hmg.car" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks.core" />
+  </component>
+</module>

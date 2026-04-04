@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../packages/services">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/AlternativeNetworkAccess/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/BuiltInPrintService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/FrameworkPackageStubs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-admin-ui-lib/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-builtin-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-evs-helper-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-helper-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-maps-placeholder/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-maps-placeholder/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-test-lib/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-usb-handler/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-usb-handler/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/app_overlays/car-ui-customizations/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSettings/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarEvsCameraPreviewAppRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitAppsCommonLauncherRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitCarServiceRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitDialerRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitLauncherRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitMediaCommonLauncherRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/CarUiPortraitMediaCommonRRO/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/android/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/car-ui-customizations/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro/car-ui-toolbar-customizations/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/experimental/experimental_api/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/experimental/service/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/experimental/service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/experimental/tests/experimentalcarservice_unit_test/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/obd2-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarActivityResolver/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarActivityResolver/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarDeveloperOptions/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarDeveloperOptions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarManagedProvisioning/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarManagedProvisioning/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/ScriptExecutor/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/ScriptExecutor/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/ScriptExecutor/tests/functional/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/ScriptExecutor/tests/nonsystemuser/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/ScriptExecutor/tests/unit/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/procfs-inspector/client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service-builtin/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service-builtin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service/proto" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/tests/AdasLocationTestApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/tests/android_car_api_test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/vehicle-hal-support-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Iwlan/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Iwlan/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Mms/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Mtp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telecomm/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Telephony/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-lib/api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-lib/native" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/bootanimations" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/bootanimation" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/emu" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/overlay" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/rro" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/occupant_awareness" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/cpp" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/data" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/CarShell" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/packages/HideCameraApps" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/procfs-inspector/server" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/services/Car/tests" />
+    </content>
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="android.car" level="project" />
+    <orderEntry type="library" name="android-non-updatable.stubs" level="project" />
+    <orderEntry type="library" name="android.hardware.automotive.vehicle-V1-java" level="project" />
+    <orderEntry type="library" name="car-service-test-static-lib" level="project" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="packages.apps" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/apps/Car/SystemUI/PBV_CarSystemUI-core/android_common/turbine/PBV_CarSystemUI-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

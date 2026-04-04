@@ -1,0 +1,238 @@
+{"attributes": [
+  {
+    "show_in_triage": true,
+    "built_in": true,
+    "values": [
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Undecided",
+        "is_deprecated": false,
+        "display_name": "Undecided"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Fix Required",
+        "is_deprecated": false,
+        "display_name": "Fix Required"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Fix Submitted",
+        "is_deprecated": false,
+        "display_name": "Fix Submitted"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Modeling Required",
+        "is_deprecated": false,
+        "display_name": "Modeling Required"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Ignore",
+        "is_deprecated": false,
+        "display_name": "Ignore"
+      }
+    ],
+    "name": "Action",
+    "attribute_definition_type": "LIST_OF_VALUES",
+    "default_value": "Undecided",
+    "display_name": "Action"
+  },
+  {
+    "show_in_triage": true,
+    "built_in": true,
+    "values": [
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Unclassified",
+        "is_deprecated": false,
+        "display_name": "Unclassified"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Pending",
+        "is_deprecated": false,
+        "display_name": "Pending"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "False Positive",
+        "is_deprecated": false,
+        "display_name": "False Positive"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Intentional",
+        "is_deprecated": false,
+        "display_name": "Intentional"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Bug",
+        "is_deprecated": false,
+        "display_name": "Bug"
+      }
+    ],
+    "name": "Classification",
+    "attribute_definition_type": "LIST_OF_VALUES",
+    "default_value": "Unclassified",
+    "display_name": "Classification"
+  },
+  {
+    "show_in_triage": true,
+    "built_in": true,
+    "values": [],
+    "name": "Ext. Reference",
+    "attribute_definition_type": "STRING",
+    "display_name": "Ext. Reference"
+  },
+  {
+    "show_in_triage": false,
+    "built_in": true,
+    "values": [{
+      "issue_kinds": [
+        "QUALITY",
+        "SECURITY"
+      ],
+      "cim_name": "Untargeted",
+      "is_deprecated": false,
+      "display_name": "Untargeted"
+    }],
+    "name": "Fix Target",
+    "attribute_definition_type": "LIST_OF_VALUES",
+    "default_value": "Untargeted",
+    "display_name": "Fix Target"
+  },
+  {
+    "show_in_triage": false,
+    "built_in": true,
+    "values": [
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "False",
+        "is_deprecated": false,
+        "display_name": "False"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "True",
+        "is_deprecated": false,
+        "display_name": "True"
+      }
+    ],
+    "name": "Legacy",
+    "attribute_definition_type": "LIST_OF_VALUES",
+    "default_value": "False",
+    "display_name": "Legacy"
+  },
+  {
+    "show_in_triage": true,
+    "built_in": true,
+    "values": [
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Unspecified",
+        "is_deprecated": false,
+        "display_name": "Unspecified"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Major",
+        "is_deprecated": false,
+        "display_name": "Major"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Moderate",
+        "is_deprecated": false,
+        "display_name": "Moderate"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Minor",
+        "is_deprecated": false,
+        "display_name": "Minor"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Mandatory",
+        "is_deprecated": false,
+        "display_name": "Mandatory"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Required",
+        "is_deprecated": false,
+        "display_name": "Required"
+      },
+      {
+        "issue_kinds": [
+          "QUALITY",
+          "SECURITY"
+        ],
+        "cim_name": "Advisory",
+        "is_deprecated": false,
+        "display_name": "Advisory"
+      }
+    ],
+    "name": "Severity",
+    "attribute_definition_type": "LIST_OF_VALUES",
+    "default_value": "Unspecified",
+    "display_name": "Severity"
+  }
+]}

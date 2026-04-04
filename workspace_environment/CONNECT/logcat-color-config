@@ -1,0 +1,30 @@
+#Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
+#Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
+#Style: DIM, NORMAL, BRIGHT, RESET_ALL
+tag_width = 25
+pid_width = 5
+tid_width = 5
+Profile(
+    name = "default",
+    tags = {
+        "AndroidRuntime": Back.RED + Fore.BLACK + Style.BRIGHT,
+        "DEBUG": Fore.YELLOW + Style.BRIGHT,
+        "ActivityTaskManager": Back.YELLOW + Fore.BLACK + Style.DIM,
+        "FingerprintApplication": Back.WHITE + Fore.GREEN + Style.NORMAL,
+        "FingerprintMainActivity": Back.WHITE + Fore.GREEN + Style.NORMAL,
+        "FingerprintFragment": Back.WHITE + Fore.GREEN + Style.NORMAL,
+        "FingerprintViewModel": Back.WHITE + Fore.YELLOW + Style.NORMAL,
+        "FingerprintViewModelFactory": Back.WHITE + Fore.YELLOW + Style.NORMAL,
+        "HmgFingerprintManager": Back.BLUE + Fore.WHITE + Style.BRIGHT,
+        "HmgFingerprintService": Back.BLUE + Fore.RED + Style.BRIGHT,
+        "MobisFingerprintService": Back.YELLOW + Fore.RED + Style.BRIGHT,
+        "MobisFingerprintShell": Back.YELLOW + Fore.WHITE + Style.DIM,
+        "ISKLearningController": Fore.WHITE + Style.BRIGHT,
+        "EnrollController": Fore.BLUE + Style.BRIGHT,
+        "AuthController": Fore.YELLOW + Style.BRIGHT,
+        "LampController": Fore.CYAN + Style.BRIGHT,
+        "VehicleStartController": Fore.WHITE + Style.BRIGHT,
+        "BaseFpmController": Back.GREEN + Fore.MAGENTA + Style.DIM,
+        "FpmMessageBuilder": Back.YELLOW + Fore.MAGENTA + Style.DIM
+    },
+)

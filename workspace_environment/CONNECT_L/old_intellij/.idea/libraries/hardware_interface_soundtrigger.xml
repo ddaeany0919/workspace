@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hardware.interface.soundtrigger">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/soundtrigger/2.0/android.hardware.soundtrigger-V2.0-java/android_common/javac/android.hardware.soundtrigger-V2.0-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/soundtrigger/2.1/android.hardware.soundtrigger-V2.1-java/android_common/javac/android.hardware.soundtrigger-V2.1-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/soundtrigger/2.2/android.hardware.soundtrigger-V2.2-java/android_common/javac/android.hardware.soundtrigger-V2.2-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/soundtrigger/2.3/android.hardware.soundtrigger-V2.3-java/android_common/javac/android.hardware.soundtrigger-V2.3-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

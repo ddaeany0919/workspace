@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/MobisEvsCameraPreviewApp">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/MobisEvsCameraPreviewApp/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/MobisEvsCameraPreviewApp/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks.core" />
+    <orderEntry type="library" name="mobis.framework" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.graphic" />
+    <orderEntry type="module" module-name="frameworks.base.libs" />
+    <orderEntry type="module" module-name="frameworks.base.media" />
+    <orderEntry type="module" module-name="frameworks.base.opengl" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+    <orderEntry type="module" module-name="frameworks.layoutlib" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.opt" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/apps/MobisEvsCameraPreviewApp/MobisEvsCameraPreviewApp/android_common/javac/classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="common.android.isp.interface-V1-java" level="project" />
+  </component>
+</module>

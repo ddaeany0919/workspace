@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/app/src/androidTest/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/app/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Launcher/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Launcher/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Launcher/tests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res-generate" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res-overlayable" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/tests/robotests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/tests/unit/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-climate" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-gnb" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-keyguard" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-statusbar" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-userprofile" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-wifi" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/tests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/mobisbugreport/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/mobisbugreport/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/mobisbugreport/tests/src" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/app/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Apps/gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Launcher/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/samples" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/tools" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="packages.services" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks" />
+    <orderEntry type="library" name="mobis.framework" level="project" />
+  </component>
+</module>

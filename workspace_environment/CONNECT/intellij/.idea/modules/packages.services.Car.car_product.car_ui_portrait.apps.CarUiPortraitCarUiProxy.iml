@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitCarUiProxy">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitCarUiProxy/plugin/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitCarUiProxy/plugin/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

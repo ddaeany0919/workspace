@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../vendor/synaptics">
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/amplitude/java/jamp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/amplitude/java/jampinput/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/amplitude/java/tvsample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/AudioRouter/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/AudioRouter2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/ExoVideoViewer/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/FixedStateLedService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/MultiVideoViewer/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/development/SynaCustomizer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/common/packagestubs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/netflix/NetflixReceiver/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/HDRHandler/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/customization/RemotePairGuide/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/AdvancedSettings/mr1_src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/AdvancedSettings/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/AmpAudioLoopback/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/AudioTestApp/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/Overscan2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/PowerSettings/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/TvInputServices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/TvSettings2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/development/sample_code/full_treble_amp_call/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/ffv/AVSLoader/app/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/hdmi_cec/OneTouchPlay/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/power/ShutdownReceiver/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/power/WakeupConfig/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/synaptics/vsxxx/power/wowlan/app/src" isTestSource="false" />
+      <excludePattern pattern="*.cpp" />
+      <excludePattern pattern="*.h" />
+      <excludePattern pattern="*.xml" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework_base" />
+  </component>
+</module>

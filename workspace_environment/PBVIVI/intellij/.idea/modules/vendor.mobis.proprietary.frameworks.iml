@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/core/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/cmds" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services/fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services/mobis_overlay" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="packages.services" />
+  </component>
+</module>

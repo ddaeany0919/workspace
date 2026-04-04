@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="framework-minus-apex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/frameworks/base/framework-minus-apex/android_common/turbine-combined/framework-minus-apex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

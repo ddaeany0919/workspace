@@ -1,0 +1,501 @@
+#!/usr/bin/env bash
+
+########################################################################################################################
+source common_bash.sh
+source common_android.sh
+#==================================================
+# getopt 기반 argument parser (모든 옵션 반영)
+#==================================================
+set -uo pipefail
+
+#-----------------------------
+# 기본값
+#-----------------------------
+PROFILE=""
+ROOT=false
+HELP=false
+CLEAN=false
+FILTER_RAW=""
+INVERT_RAW=""
+PROCESS_RAW=""
+PROCESS_PKG=""
+TEE_FILE=""
+INPUT_FILE=""
+VIEW=false
+RECONNECT=false
+DEBUG=false
+
+# 파생값 (필요하면 사용)
+FILTER_TAGS=()  # | 로 분리된 태그 배열
+INVERT_TAGS=()
+
+########################################################################################################################
+targetDevice="${ANDROID_SERIAL}"
+
+DEVICE_PRODUCT=""
+DEVICE_VERSION=""
+
+LOG_FORMAT="threadtime"
+GREP_COMMAND="egrep --line-buffered"
+LOGCAT_CONFIG="${WORKSPACE_LOGCAT_CONFIG:-"${HOME}/workspace/bin/.logcat-color"}"
+LOGCAT_COLOR="logcat-color --no-wrap --config=${LOGCAT_CONFIG}"
+LOGCAT_BASIC_OPTION="logcat -v ${LOG_FORMAT} -b all"
+LOGCAT_PROCESS_OPTION=""
+
+
+LOGCAT_COMMAND="adb -s $targetDevice $LOGCAT_BASIC_OPTION"
+
+# is_ip_address=$(echo "$ANDROID_SERIAL" | grep : | wc -l)
+# ip_addr=$(echo "$ANDROID_SERIAL" | cut -d : -f 1)
+# port=$(echo "$ANDROID_SERIAL" | cut -d : -f 2)
+
+
+
+RECONNECT=false
+needFlush=false
+viewMode=false
+readFile="";
+# invertFilterList="doRegistryinit"
+invertFilterList=""
+filterList=""
+processFilterList=""
+profile=""
+DATE=$(date "+%y%m%d")
+log_directory="${HOME}/temp"
+if [ ! -d "${log_directory}" ]; then
+    mkdir ${log_directory}
+fi
+
+########################################################################################################################
+
+function die() { echo "❌ $*" >&2; exit 1; }
+
+function split_pipe() {  # "a|b|c" -> 배열에 push
+  local s="${1:-}"
+  [[ -z "$s" ]] && return 0
+  IFS='|' read -r -a __arr <<<"$s"
+  printf '%s\0' "${__arr[@]}"
+}
+
+function validate_taglist() { # 태그 유효성(원하면 규칙 바꿔도 됨)
+  local s="${1:-}"
+  [[ -z "$s" ]] && return 0
+  # 허용: 영문/숫자/_/- 로 구성된 태그들을 '|' 로 연결
+  [[ "$s" =~ ^[A-Za-z0-9_-]+(\|[A-Za-z0-9_-]+)*$ ]] || \
+    die "잘못된 태그 목록입니다: '$s' (예: tag1|tag2)"
+}
+
+function usage() {
+  cat <<'EOF'
+Usage: script.sh [options]
+
+Options:
+  --root                      Run as root (flag)
+  --profile <name>            Profile name (value)
+  -h, --help                  Show help (flag)
+
+  --reconnect, -r             Reconnect (flag)
+  --view, -V                  View mode (flag)
+  --debug, -d                 Enable debug (flag)
+
+  --filter <tag1|tag2>, -f <tag1|tag2>
+                              Filter tags (value, '|' 구분)
+  --invert <tag1|tag2>, -v <tag1|tag2>
+                              Invert tags (value, '|' 구분)
+
+  --process <package>, -p <package>
+                              Target package name (value)
+  --tee <file>, -t <file>     Tee output file (value)
+  --input <file>, -i <file>   Input file (value)
+
+호출 예:
+  ./script.sh --root --profile dev -r -V --filter "net|ui" --invert=beta \
+    -p com.example.app -t out.log -i input.txt --debug
+EOF
+}
+
+trap cleanup SIGINT
+function cleanup() {
+    log -w "cleanup!"
+    RECONNECT=false
+    exit 0
+}
+########################################################################################################################
+
+function viewLog {
+    command=""
+    local ip_addr=$(echo "${ANDROID_SERIAL}" | cut -d : -f 1)
+    ip_addr_array=($(echo ${ip_addr} | tr '.' ' '))
+    local length=${#ip_addr_array[@]}
+    local last_index=$(expr ${length} - 1)
+    local last_ip=${ip_addr_array[${last_index}]}
+    local product_name=$(echo "${WORKSPACE_PROJECT}" | tr '[:upper:]' '[:lower:]')
+
+    DATE=$(date "+%y%m%d")
+    log_directory="${HOME}/temp"
+    log -d "log_directory=${log_directory}"
+    log -d "${DATE}_*${last_ip}"
+    log_file=$(ls -t ${log_directory}/${DATE}_${product_name}_*${last_ip}*.logcat | head -n1)
+    log -d "log_file=${log_file}"
+    filter=""
+
+    if [ ! -d "${log_directory}" ]; then
+        log -e "${log_directory} is not exist!"
+        return 1
+    elif [ -f ${log_file} ]; then
+        # log -d "args = $#"
+        # if [ $# -ge 1 ]; then
+        #     for ARG in "$@"; do
+        #         log -d "filter=${filter}"
+        #         if [ ! -z ${filter} ]; then
+        #             filter="${filter}|"
+        #         fi
+        #         filter="${filter}${ARG}"
+        #     done
+        #     log -d "filter=${filter}"
+        #     log -i "egrep -ai \"${filter}\" ${log_file} | logcat-color"
+        #     egrep -ai "${filter}" ${log_file} | logcat-color
+        log -d "filter_values=${filter_values}"
+        log -d "command=${filter_values}"
+        if [ ! -z "${filter_values}" ]; then
+            command="egrep -ai \"${filter_values}\" ${log_file}"
+        fi
+
+        if [ ! -z "${invertFilterList}" ]; then
+            if [ ! -z "${command}" ]; then
+                command="${command} | egrep -iav \"$invertFilterList\""
+            else
+                command=" egrep -iav \"$invertFilterList\" ${log_file}"
+            fi
+        fi
+
+        log -d "command=$command"
+        if [ ! -z "${command}" ]; then
+            eval $command | ${LOGCAT_COLOR}
+        else
+            vi ${log_file}
+        fi
+    else
+        log -e "${log_file} is not exist!"
+        return 1
+    fi
+}
+
+function connectToAdbDevice() {
+    if $DEBUG; then
+        log -d "$FUNCNAME: RECONNECT=$RECONNECT"
+    fi
+
+    # wait for device
+    adb_wait-for-device
+    do_execute -q adb_connect root
+}
+
+function clearBuffer() {
+    if $DEBUG; then
+        log -d "clearBuffer: targetDevice=$targetDevice"
+    fi
+    if ! adb_is_connected; then
+        if ! connectToAdbDevice; then
+            log -e "clearBuffer: Could not connect to adb device: ${ANDROID_SERIAL}"
+            return 1
+        fi
+    fi
+
+    do_execute -i "adb -s $targetDevice logcat -c -b all"
+}
+
+function makeFilterList() {
+    local filter_values=""
+    if [ -n "$filterList" ]; then
+        filter_values=$filterList
+    fi
+
+    if [ $# -gt 0 ]; then
+        for filter in "$@"; do
+            if [ -z "$filter_values" ]; then
+                filter_values="$filter"
+            else
+                filter_values="$filter_values|$filter"
+            fi
+
+        done
+    fi
+
+    if [ -n "$filter_values" ]; then
+        filter_values="fatal|$filter_values"
+        echo "$GREP_COMMAND -ia \"$filter_values\""
+        return 0
+    fi
+    return 1
+}
+
+function makeInvertFilterList() {
+    if [ -n "$invertFilterList" ]; then
+        echo "$GREP_COMMAND -iav \"$invertFilterList\""
+        return 0
+    fi
+    return 1;
+}
+
+
+function buildProcessFilter() {
+    local usePidOf=true
+    # get pid of process from PROCESS_PKG
+
+    processFilterList=${PROCESS_RAW[@]}
+    log -d "$FUNCNAME:\t process filter list=\"$processFilterList\""
+    if [ -n "$processFilterList" ]; then
+        if $usePidOf; then
+            filter_process=$(do_execute -i "adb shell pidof \"$processFilterList\"")
+            # check pid count
+            pid_count=$(echo "$filter_process" | wc -w)
+            if [ $pid_count -gt 1 ]; then
+                log -w "Multiple PIDs found for package \"$processFilterList\": $filter_process. Monitoring all of them."
+                # " | egrep \" pid1 | pid2\""
+                local result=""
+                for pid in $filter_process; do
+                    if [ -z "$result" ]; then
+                        result=" $pid "
+                    else
+                        result="$result| $pid "
+                    fi
+                    
+                done
+                result=" | egrep \"$result\""
+                echo $result
+            elif [ $pid_count -eq 0 ]; then
+                log -w "No PID found for package \"$processFilterList\". Process might not be running. Please check the package name or ensure the app is running."
+                echo ""
+            else
+                log -i "PID found for package \"$processFilterList\": $filter_process"
+                IFS=' ' read -r -a filter_process <<<"$filter_process"
+                # log -d "$FUNCNAME:\t filter_process array=\"${filter_process[@]}\""
+                # make pid filter option (--pid=xxxx)
+                local result="${filter_process[@]/#/--pid=}"
+                echo "${filter_process[@]/#/--pid=}"
+            fi
+            
+            
+            # log -d "$FUNCNAME:\t LOGCAT_PROCESS_OPTION=\"$LOGCAT_PROCESS_OPTION\""
+            
+        else
+            command="$command| $GREP_COMMAND \`adb shell ps -ef | $GREP_COMMAND $processFilterList | tr -s [:space:] ' ' | cut -d' ' -f2\`"
+            log -d "$FUNCNAME: $command"
+            echo "TODO: need to implement process name filter without pidof"
+        fi
+    fi
+    echo "";
+}
+
+
+function printFromFile() {
+    command=""
+    local invertFilters=$(makeInvertFilterList)
+    local filters=$(makeFilterList $@)
+
+    if [ -n "${invertFilters}" ]; then
+        command="${invertFilters} ${readFile}"
+    fi
+
+    if [ -n "${filters}" ]; then
+        if [ -n "${command}" ]; then
+            command="${command} | ${filters}"
+        else 
+            command="${filters} ${readFile}"
+        fi
+    fi
+
+    if [ ! -n "${command}" ]; then
+        command="cat ${readFile}"
+    fi
+    
+}
+
+########################################################################################################################
+#-----------------------------
+# getopt 정의
+#  - short : hVrdf:v:p:t:i:
+#  - long  : help, root, profile:, reconnect, view, debug,
+#            filter:, invert:, process:, tee:, input:
+#-----------------------------
+OPTS=$(getopt -o hcVrdf:v:p:t:i: \
+  -l help,clean,root,profile:,reconnect,view,debug,filter:,invert:,process:,tee:,input: -- "$@") || {
+  die "옵션 파싱 실패"
+}
+eval set -- "$OPTS"
+#--------------------------------------------------
+# 옵션 파싱
+#--------------------------------------------------
+while true; do
+  case "$1" in
+    -h|--help)      usage; exit 0 ;;
+    --root)         ROOT=true; shift ;;
+    --profile)      PROFILE="$2"; shift 2 ;;
+
+    -c|--clean)     CLEAN=true; shift ;;
+    -r|--reconnect) RECONNECT=true; shift ;;
+    -V|--view)      VIEW=true; shift ;;
+    -d|--debug)     DEBUG=true; shift ;;
+
+    -f|--filter)    FILTER_RAW="$2"; shift 2 ;;
+    -v|--invert)    INVERT_RAW="$2"; shift 2 ;;
+
+    -p|--process)   PROCESS_RAW="$2"; shift 2 ;;
+    -t|--tee)       TEE_FILE="$2"; shift 2 ;;
+    -i|--input)     INPUT_FILE="$2";
+                    if [ ! -f "${INPUT_FILE}" ]; then
+                       log -w "${INPUT_FILE} is not exist!"
+                       exit 1;
+                    fi
+                    shift 2 ;;
+
+    --)             shift; break ;;
+    *)              die "알 수 없는 옵션: $1" ;;
+  esac
+done
+
+# 필요시 필수 옵션 강제 (예: profile 필수화)
+# [[ -z "$PROFILE" ]] && die "--profile 는 필수입니다."
+
+# validate_taglist "$FILTER_RAW"
+# validate_taglist "$INVERT_RAW"
+# validate_taglist "$PROCESS_RAW"
+
+# 파생 배열 만들기
+if [[ -n "$FILTER_RAW" ]]; then
+  mapfile -d '' FILTER_TAGS < <(split_pipe "$FILTER_RAW")
+fi
+if [[ -n "$INVERT_RAW" ]]; then
+  mapfile -d '' INVERT_TAGS < <(split_pipe "$INVERT_RAW")
+fi
+if [[ -n "$INVERT_RAW" ]]; then
+  mapfile -d '' PROCESS_PKGS < <(split_pipe "$PROCESS_RAW")
+fi
+
+if $DEBUG; then
+  echo "# Parsed options"
+  echo "ROOT        = $ROOT"
+  echo "PROFILE     = $PROFILE"
+  echo "HELP        = $HELP"
+  echo "CLEAN       = $CLEAN"
+  echo "RECONNECT   = $RECONNECT"
+  echo "VIEW        = $VIEW"
+  echo "DEBUG       = $DEBUG"
+  echo "FILTER_RAW  = $FILTER_RAW"
+  echo "INVERT_RAW  = $INVERT_RAW"
+  echo "PROCESS_RAW = $PROCESS_RAW"
+  echo "TEE_FILE    = $TEE_FILE"
+  echo "INPUT_FILE  = $INPUT_FILE"
+
+  echo -n "FILTER_TAGS = ["; printf '%s, ' "${FILTER_TAGS[@]}" 2>/dev/null || true; echo "]"
+  echo -n "INVERT_TAGS = ["; printf '%s, ' "${INVERT_TAGS[@]}" 2>/dev/null || true; echo "]"
+  echo -n "PROCESS_PKGS= ["; printf '%s, ' "${PROCESS_RAW[@]}" 2>/dev/null || true; echo "]"
+fi
+########################################################################################################################
+
+#buildSpecificCommand
+
+executeCommand=""
+
+if [ -z ${readFile} ]; then
+    if $RECONNECT; then
+        connectToAdbDevice
+    fi
+
+    if $CLEAN; then
+        clearBuffer
+    fi
+
+    DEVICE_PRODUCT=$(adb shell getprop ro.product.model ro.build.version.incremental)
+    DEVICE_VERSION=$(adb shell getprop ro.build.version.incremental)
+
+    executeCommand="${LOGCAT_COMMAND}"
+
+    LOGCAT_PROCESS_OPTION=$(buildProcessFilter)
+    if [ -n "${LOGCAT_PROCESS_OPTION}" ]; then
+        executeCommand="${executeCommand} ${LOGCAT_PROCESS_OPTION}"  
+    fi
+    # if
+    
+    # buildBasicCommand
+
+    prefix="${DATE}_${DEVICE_PRODUCT}_${DEVICE_VERSION}"
+    surfix="${ANDROID_SERIAL}"
+    teeFileInfo="$log_directory/${prefix}_${surfix}.logcat"
+    executeCommand="${executeCommand} | tee $teeFileInfo"
+
+
+    
+    if [ ! "${FILTER_RAW}" == "" ];then
+        FILTER_OPTION="${GREP_COMMAND} -ia \"${FILTER_RAW}\""
+        executeCommand="${executeCommand} | ${FILTER_OPTION}"
+    fi
+    
+    if [ ! "${INVERT_RAW}" == "" ];then
+        INVERT_OPTION="${GREP_COMMAND} -iav \"${INVERT_RAW}\""
+        executeCommand="${executeCommand} | ${INVERT_OPTION}"
+    fi
+    # local product=$(adb shell getprop ro.build.product)
+    # local version=$(adb shell getprop ro.build.version.incremental)
+ 
+
+    if $DEBUG; then
+        log -d "LOGCAT_PROCESS_OPTION  = $LOGCAT_PROCESS_OPTION"
+        # log -d "FILTER_OPTION  = $FILTER_OPTION"
+        # log -d "INVERT_OPTION  = $INVERT_OPTION"
+        log -d "DEVICE_VERSION  = $DEVICE_VERSION"
+        log -d "DEVICE_PRODUCT  = $DEVICE_PRODUCT"
+        log -d "Final executeCommand=\"$executeCommand\""
+    fi
+    
+else
+    RECONNECT=false
+    printFromFile $@;
+fi
+
+if $viewMode; then
+    viewLog $@
+else
+    command="$executeCommand | $LOGCAT_COLOR"
+    if $DEBUG; then
+        log -d "${command}"
+        exit 0;
+    fi
+    # wait-for-device by loop
+    while true; do
+        log -w "wait-for"
+        adb_wait-for-device
+        draw_line_with_title "Device connected..." "-" ${COLOR_GREEN}
+    # when connected then run logcat command
+        eval ${command}
+        draw_line_with_title "Device disconnected..." "-" ${COLOR_YELLOW}
+    # if disconnected then wait-for-device again
+        # log -d "try logcat"
+        # sleep 2
+    done
+
+
+
+    # function doCommand() {
+    #     draw_line_with_title "Executing logcat command..." "-" ${COLOR_BLUE}
+    #     log -i "Command: ${command}"
+        
+    #     eval ${command}
+    # }
+
+    # doCommand
+
+    # while true; do
+        
+    #     draw_line_with_title "Reconnecting to device..." "-" ${COLOR_YELLOW}
+
+    #     log -w "wait-for"
+    #     adb wait-for-device
+    #     draw_line_with_title "Device connected..." "-" ${COLOR_GREEN}
+        
+    #     doCommand
+    #     log -d "try logcat"
+    #     sleep 2
+    # done
+fi

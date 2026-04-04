@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../packages/apps">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/LatinIME/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/LatinIME/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/Provision/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/Provision/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/SystemUpdater/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/SystemUpdater/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-assist-client-lib/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-assist-client-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-broadcastradio-support/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-broadcastradio-support/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-qc-lib/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/car-qc-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/CertInstaller/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/CertInstaller/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/KeyChain/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/KeyChain/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/KeyChain/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/ManagedProvisioning/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/ManagedProvisioning/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/ManagedProvisioning/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/PhoneCommon/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/PhoneCommon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Provision/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/SecureElement/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/SecureElement/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/SecureElement/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Settings/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Settings/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Settings/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Stk/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Stk/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/StorageManager/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/StorageManager/robotests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/StorageManager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/StorageManager/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/WallpaperPicker/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/WallpaperPicker/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/systemlibs/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/CertInstaller/robotests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/KeyChain/robotests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/KeyChain/support" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/ManagedProvisioning/proto" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/ManagedProvisioning/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/SecureElement/etc" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/Settings/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/apps/Settings/protos" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+  </component>
+</module>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="external.jsr330">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/external/jsr330/jsr330/android_common/turbine-combined/jsr330.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../external/jsr330/src" />
+    </SOURCES>
+  </library>
+</component>

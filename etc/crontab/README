@@ -1,0 +1,7 @@
+출처: https://kibua20.tistory.com/89 [모바일 SW 개발자가 운영하는 블로그:티스토리]
+
+1. 작업 등록
+crontab -e| tee logfile.txt
+
+SHELL=/bin/bash
+0 3 * * 1-5 /home/luis/workspace/bin/etc/crontab/weekday_0600.sh | tee /home/luis/logs/crontab_log.txt

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="androidx">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../prebuilts/sdk/current/androidx/m2repository/androidx" />
+      <root url="jar://$PROJECT_DIR$/../prebuilts/sdk/current/androidx/m2repository/androidx/activity/activity-compose/1.5.0-alpha03/activity-compose-1.5.0-alpha03-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../prebuilts/sdk/current/androidx/m2repository/androidx/room/room-common/2.5.0-alpha01/room-common-2.5.0-alpha01-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

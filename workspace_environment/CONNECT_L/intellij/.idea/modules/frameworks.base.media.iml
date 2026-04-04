@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/media">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/lib/remotedisplay/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/lib/signer/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/lib/tvremote/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/lib/tvremote/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/mca/effect/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/mca/filterfw/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/mca/filterpacks/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/mca/samples/CameraEffectsRecordingSample/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/mca/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/packages/BluetoothMidiService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/packages/BluetoothMidiService/tests/unit/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/AudioPolicyTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/CameraBrowser/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/EffectsTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/MediaDump/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/MediaFrameworkTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/MediaRouter/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/MtpTests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/ScoAudioTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/SoundPoolTest/src/com/android" isTestSource="false" packagePrefix="com.android.soundpooltest" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/TunerTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/tests/aidltests/src/com/android/media" isTestSource="false" packagePrefix="android.media.audio.common" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/aidl" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/aidl_api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/media/native" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="services.core.unboosted" level="project" />
+  </component>
+</module>

@@ -1,0 +1,6 @@
+export GOOGLE_CLOUD_SDK="$WORKSPACE_UTILS/google-cloud-sdk"
+export PATH="$GOOGLE_CLOUD_SDK/bin:$PATH"
+if [ -f '$GOOGLE_CLOUD_SDK/path.bash.inc' ]; then source '$GOOGLE_CLOUD_SDK/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$GOOGLE_CLOUD_SDK/completion.bash.inc' ]; then source '$GOOGLE_CLOUD_SDK/completion.bash.inc'; fi

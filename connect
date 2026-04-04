@@ -1,0 +1,219 @@
+#!/usr/bin/env bash
+
+source common_bash.sh
+
+CONFIG_ROOT=true
+DEF_REMOUNT=true
+DEBUG=false
+
+trap cleanup EXIT
+function cleanup() {
+    exit 0
+}
+
+# ip_addr=$(echo "$ANDROID_SERIAL" | cut -d : -f 1)
+# port=$(echo "$ANDROID_SERIAL" | cut -d : -f 2)
+# isConnected=false
+isRooted=!$CONFIG_ROOT
+
+targetDevice="$ANDROID_SERIAL"
+
+function internal_check_args() {
+    while getopts rnd option; do
+        case ${option} in
+        r)
+            disconnect
+            ;;
+        n)
+            DEF_REMOUNT=false
+            CONFIG_ROOT=false
+            ;;
+        d)
+            DEBUG=true
+            ;;
+        esac
+    done
+}
+
+function isConnectedState() {
+    log -d "isConnectedState"
+
+    cnt=$(adb devices | grep $targetDevice | grep device | wc -l)
+    if [ $cnt -gt 0 ]; then
+        do_execute -q "adb -s $targetDevice shell echo"
+        local result=$?
+        log -d "isConnectedState: result=$result"
+        case $result in
+        0)
+            return 0
+            ;;
+        *)
+            log -e "Some problem! ($result)"
+            return $result
+            ;;
+        esac
+    fi
+    return 1
+}
+
+function connect() {
+    log "connect $targetDevice"
+    isConnectedState
+    result=$?
+    if [ ${result} -eq 0 ]; then
+        log -i "Already connected"
+        isConnected=true
+        return 0
+    else
+        log "Try to connect by the adb to $targetDevice"
+        ensure_connect
+        result=$?
+        if $CONFIG_ROOT && [ $result -eq 0 ]; then
+            ## do adb root
+            adb_root
+            if [ ${isRooted} ]; then
+                ## retry the adb connect
+                ensure_connect
+                if [ ${isConnected} ]; then
+                    ## Success all process!!
+                    # adb shell "ampdiag log on"
+                    # adb shell "ampdiag setmodl VOUT 0xff"
+                    # adb shell "ampdiag setmodl DISPSRV 0xff"
+                    # adb shell "test_disp setplanemute 0 0xFF7"
+                    # adb shell "test_disp setplanemute 0 0xFF7"
+                    # adb shell "test_disp setplanemute 0 0xFF7"
+                    # adb shell "test_disp setplanemute 0 0xFC2"
+                    # adb shell "test_disp setplanemute 0 0xFC3"
+                    # adb shell "test_disp setplanemute 0 0xC2"
+                    # adb shell "test_disp setplanemute 0 0xC3"
+                    # adb shell "test_disp setplanemute 0 0xF54"
+                    # adb shell "test_disp setplanemute 0 0xFC4"
+                    # adb shell "test_disp setplanemute 0 0xF52"
+                    # adb shell "test_disp setplanemute 0 0xF53"
+                    if $DEF_REMOUNT; then
+                        remount
+                    fi
+                    return 0
+                fi
+            fi
+        fi
+    fi
+    return $result
+}
+
+function ensure_connect() {
+    log -d "ensure_connect, isConnected : $isConnected"
+
+    try=0
+    maxTry=50
+    while [ $isConnected == false ]; do
+        try=$(expr $try + 1)
+        log -i "adb connect $targetDevice"
+        adb connect $targetDevice
+        # do_execute "adb connect $targetDevice"
+
+        
+        result=$(isConnectedState)
+
+        if [[ ${result} -eq 0 ]]; then
+            log -i "connect success!"
+            isConnected=true
+            return 0
+        else
+            if [ $try -gt $maxTry ]; then
+                log -e "connect FAIL!!!"
+                isConnected=false
+                exit 1
+            fi
+            sleep 2
+        fi
+    done
+}
+
+function adb_root() {
+    log -d "adb_root"
+
+    result=0
+    if [ "$(adb -s $targetDevice shell whoami)" != "root" ]; then
+        do_execute -q "adb -s $targetDevice root"
+        result=$?
+        if [ $result -eq 0 ]; then
+            log -i "root OK!"
+            isRooted=true
+        else
+            log -e "root FAIL!"
+        fi
+    else
+        isRooted=true;
+        result=0;
+    fi
+
+    isConnected=false
+    return $result
+}
+
+function disconnect() {
+    if [ ! -z "$(adb devices | grep $ANDROID_SERIAL)" ]; then
+        log -i "disconnect $targetDevice"
+        do_execute -q "adb disconnect $targetDevice"
+
+        result=$?
+        if [ ! $result -eq 0 ]; then
+            log -e "adb daemon has some problem!!\nYou need restart service of adb"
+            exit 1
+        fi
+    fi
+    isConnected=false
+    return $result
+}
+
+function remount() {
+    log -d "remount"
+    local result=0
+
+    if [ $isConnected == true ]; then
+        #do_execute -q "adb -s $targetDevice shell mount -o rw,remount /system_nor";
+        #do_execute -q "adb -s $targetDevice shell mount -o rw,remount /system";
+        do_execute -q "adb -s $targetDevice wait-for-device remount -R"
+        result=$(adb -s $targetDevice wait-for-device remount -R | grep fail | wc -l)
+        log -d "remount, result=$result"
+        if [ $result -eq 0 ]; then
+            log -i "Remount OK!"
+        else
+            log -w "Remount faied"
+        fi
+    else
+        log -e "Not connected with adb"
+    fi
+}
+
+function top() {
+    log -d "top()"
+
+    connect
+    mArgsCnt=$#
+    if [ $mArgsCnt -gt 0 ]; then
+        touch temp
+        mArray=()
+
+        for args in $*; do
+            mArray+=("$args")
+        done
+
+        while [ true ]; do
+            adb shell top -n 1 >temp
+            #echo -e "$output" | sed 's/ /\t/g';
+            #sed 's/ /\t/g' $output;
+            echo "================================================================================"
+            cat temp | head -7
+
+            for ((i = 0; i < $#; i++)); do
+                cat temp | grep --color ${mArray[$i]}
+            done
+        done
+    fi
+    return 0
+}
+
+internal_check_args $*
+connect

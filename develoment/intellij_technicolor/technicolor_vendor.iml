@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../vendor/technicolor">
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/common/apps/AtmosFilePlayer/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/common/apps/BootupTraceQR/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/common/apps/HardwareProperties/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/common/apps/HardwareProperties/test/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/common/libs/android-tv-settings-base-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/external/factory_tools/BluetoothChat/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/external/factory_tools/BluetoothRSSI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/external/factory_tools/MixView/gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/external/factory_tools/MixView/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/marvell_skipper/libs/get_temperature/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/marvell_skipper/libs/get_temperature/test/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../vendor/technicolor/marvell_skipper/libs/wifiextension/java" isTestSource="false" />
+      <excludePattern pattern="*.cpp" />
+      <excludePattern pattern="*.h" />
+      <excludePattern pattern="*.xml" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework_base" />
+  </component>
+</module>

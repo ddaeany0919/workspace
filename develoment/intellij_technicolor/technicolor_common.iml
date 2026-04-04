@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../device/technicolor/common">
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/BlackScreen/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/LgBtManager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/SampleAssistantLed/LedService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/SetupCustomizer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/TestAudioService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/ctc/CtcService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/dhcpstandalone/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/SystemApiTest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/SystemApiTestVendor/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/aidl_interface/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/aidl_interface_aisound/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/aidl_interface_soundbar/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/tests/voice_test/gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/iptvsystemserver/tests/voice_test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/lgdownloader/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/lgliveplayer/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/lgshm/IptvShmService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/lgtv/TvInput/IpTvInput/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/lgvodplayer/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/simpleBrowser2/src/org/chromium/webview_shell" isTestSource="false" packagePrefix="com.technicolor.simpleBrowser" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/sysUI/SysUIService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/sysUI/SysUIView/NativeView/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/utilservices/libs/jsch-0.1.55/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/utilservices/libs/jsch-0.1.55/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/utilservices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../device/technicolor/common/warm_boot/standby/src" isTestSource="false" />
+      <excludePattern pattern="*.cpp" />
+      <excludePattern pattern="*.h.*" />
+      <excludePattern pattern=".xml" />
+      <excludePattern pattern="*.txt" />
+      <excludePattern pattern="*.png" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework_base" />
+  </component>
+</module>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hardware_interface">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/tv/cec/1.0/android.hardware.tv.cec-V1.0-java/android_common/turbine/android.hardware.tv.cec-V1.0-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/light/2.0/android.hardware.light-V2.0-java/android_common/turbine/android.hardware.light-V2.0-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/power/1.0/android.hardware.power-V1.0-java/android_common/turbine/android.hardware.power-V1.0-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/tv/input/1.0/android.hardware.tv.input-V1.0-java-constants/android_common/javac/android.hardware.tv.input-V1.0-java-constants.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

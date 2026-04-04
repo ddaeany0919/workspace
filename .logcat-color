@@ -1,0 +1,11 @@
+tag_width = 25
+pid_width = 5
+tid_width = 5
+Profile(
+    name = "default",
+    tags = {
+        "AndroidRuntime": RED,
+        "DEBUG": RED,
+        r"wm_*": WHITE,
+    },
+)

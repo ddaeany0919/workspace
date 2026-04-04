@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/services">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/accessibility/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/appprediction/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/appwidget/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/autofill/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/backup/backuplib/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/backup/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/companion/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/contentcapture/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/contentsuggestions/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/core/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/coverage/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/devicepolicy/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/midi/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/net/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/people/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/print/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/restrictions/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/systemcaptions/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/usage/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/usb/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/voiceinteraction/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/services/wifi/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.media" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="android-non-updatable.stubs" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="services.core.unboosted" level="project" />
+    <orderEntry type="library" name="core-libart" level="project" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/android.car.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/gson-2.10.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/RearCareModeRemote.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/mobis.framework.core.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/libphonenumber-8.13.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/mobis.bluetoothexternal.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

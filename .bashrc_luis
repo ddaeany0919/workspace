@@ -1,0 +1,138 @@
+OS=$(uname -s)
+############ BASH ###########
+#export HISTCONTROL=ignoreboth:erasedups
+#export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export UNZIP="-O cp949"
+export ZIPINFO="-O cp949"
+
+############ PS1 ###########
+# Reset
+Color_Off='\[\e[0m\]'       # Text Reset
+
+# Colors will work nice when used with "Solarized" palette.
+# Nothing new here
+Normal='\[\e[00m\]'         # Normal
+Red='\[\e[0;31m\]'          # Red
+BRed='\[\e[01;31m\]'        # Red
+Green='\[\e[0;32m\]'        # Green
+BGreen='\[\e[01;32m\]'      # Green
+Yellow='\[\e[0;33m\]'       # Yellow
+BYellow='\[\e[01;33m\]'     # Yellow
+Blue='\[\e[0;34m\]'         # Blue
+BBlue='\[\e[1;34m\]'        # Blue
+Purple='\[\e[0;35m\]'       # Purple
+BPurple='\[\e[1;35m\]'      # Purple
+White='\[\e[0;37m\]'        # White
+BWhite='\[\e[1;37m\]'       # White
+
+############ WORKSPACE ###########
+WORKSPACE_ROOT=$HOME/workspace
+WORKSPACE_UTILS=$WORKSPACE_ROOT/3.utils
+export PATH="$WORKSPACE_ROOT/bin:$PATH"
+export PATH="$WORKSPACE_ROOT/bin/ai:$PATH"
+source common_bash.sh
+export DISPLAY="`cat $WORKSPACE_ROOT/bin/.HOST_DISPLAY`:0.0"
+
+############# ANDROID ############
+export ANDROID_HOME=$WORKSPACE_UTILS/Android/Sdk
+if [ -d ${ANDROID_HOME} ]; then
+    if [ -d $ANDROID_HOME/tools ]; then
+        export PATH=$PATH:$ANDROID_HOME/tools
+    fi
+    if [ -d $ANDROID_HOME/bin ]; then
+        export PATH=$PATH:$ANDROID_HOME/bin
+    fi
+    if [ -d $ANDROID_HOME/platform-tools ]; then
+        export PATH=$PATH:$ANDROID_HOME/platform-tools
+    fi
+    if [ -d $ANDROID_HOME/cmdline-tools/latest/bin ]; then
+        export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+    fi
+fi
+
+############## ALIAS - COMMON ##############
+if [ $OS = "Darwin" ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=tty'
+fi
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp="$WORKSPACE_ROOT/bin/advcpmv/advcp -g"
+alias mv="$WORKSPACE_ROOT/bin/advcpmv/advmv -g"
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias vi='vim'
+alias minicom='minicom -c on'
+alias edit='code'                           # edit:         Opens any file in atom
+alias go_temp="cd ${HOME}/temp"
+alias logcat-color="logcat-color --no-wrap --config=${WORKSPACE_ROOT}/bin/etc/logcat-color/.logcat-color"
+
+#   lr:  Full Recursive Directory Listing
+#   ------------------------------------------
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+#   -------------------------------
+#   2. FILE AND FOLDER MANAGEMENT
+#   -------------------------------
+alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
+
+#   ---------------------------
+#   3. SEARCHING
+#   ---------------------------
+alias qfind="find . -name "                 # qfind:    Quickly search for file
+
+#   ---------------------------
+#   4. GIT
+#   ---------------------------
+source $WORKSPACE_ROOT/bin/common_git.sh
+
+
+#   ---------------------------
+#   5. NETWORKING
+#   ---------------------------
+alias sshfs_svr='sshfs -o follow_symlinks svr:/home/sskim/ /mnt/svr'
+alias sshfs_vm='sshfs -o follow_symlinks vm:/home/ubuntu/ /mnt/vm'
+
+#   ---------------------------
+#   6. DOCKER
+#   ---------------------------
+alias docker_workspace='docker exec -it workspace bash'
+
+############## BASH-FUNCTIONS ##############
+source $WORKSPACE_ROOT/bin/common.sh
+source $WORKSPACE_ROOT/bin/.bashrc_functions
+
+############## BASH-default envrionments ##############
+source $WORKSPACE_ROOT/bin/.default_env
+
+############## EXTRA BASHRC ##############
+if [ $OS = "Darwin" ]; then
+  # source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+  source $WORKSPACE_ROOT/bin/.bashrc_osx
+elif [[ ! -z $WSLENV ]]; then
+    source $WORKSPACE_ROOT/bin/.bashrc_wsl
+fi
+
+############## PS1 ################
+source $WORKSPACE_ROOT/bin/ps1.sh
+
+############## ARCH LINUX - KOREAN ##############
+export VISUAL="vim"
+
+############## GOOGLE CLOUD SDK ##############
+# The next line updates PATH for the Google Cloud SDK.
+if [ -d "$WORKSPACE_UTILS/google-cloud-sdk" ]; then
+    source $WORKSPACE_ROOT/bin/.bashrc_google_cloud
+fi;
+
+
+

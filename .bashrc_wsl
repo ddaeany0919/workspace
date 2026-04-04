@@ -1,0 +1,134 @@
+export JAVA_HOME=${JAVA_HOME-:"/usr/lib/jvm/java-17-openjdk-amd64"}
+
+# edit:  Opens any file in code
+alias edit='code'
+# replace adb execution binary
+function docker_exec_workspace() {
+    local opt="";
+    [ ! -z "$1" ] && opt="-w $(realpath $1)"
+    docker exec -it ${opt} workspace bash
+}
+
+function mount_drvfs() {
+    if [ -z "$1" ]; then
+        log -w "must need drive path"
+        return 1;
+    elif [ ! -d /mnt/$1 ]; then
+        sudo mkdir /mnt/$1
+    fi
+
+    # Check if the drive is already mounted
+    if mountpoint -q /mnt/$1; then
+        log -i "Drive is already mounted at /mnt/$1"
+    else
+        # Attempt to mount the drive with the specified options
+        log -i "Mounting $1 to /mnt/$1"
+        # Use drvfs for mounting Windows drives in WSL
+        # The options used here are:
+        # - metadata: Enable metadata support
+        # - umask=22: Set default permissions for files
+        # - fmask=11: Set default permissions for directories
+        # - uid=$(id -u): Set the user ID of the mounted files
+        # - gid=$(id -g): Set the group ID of the mounted files
+        do_execute -i sudo mount -t drvfs -o metadata,umask=22,fmask=11,uid=$(id -u),gid=$(id -g) $1: /mnt/$1 
+        if mountpoint -q /mnt/$1; then
+            log -i "Mount successful: /mnt/$1, and you can access it via /mnt/$1"
+            # Optionally, you can add the mount to /etc/fstab for persistence
+            # echo "$1: /mnt/$1 drvfs defaults,metadata,umask=22,fmask=11,uid=$(id -u),gid=$(id -g) 0 0" | sudo tee -a /etc/fstab
+            # sudo mount -a
+        else
+            log -e "Mount failed: /mnt/$1"
+            return 1;
+        fi
+    fi  
+        
+    # Check if the mount was successful
+    log -i "Let's go to /mnt/$1"
+    cd /mnt/$1
+}
+
+function cmd_copy {
+    log -d "cmd_copy $@"
+    local file=$(realpath $1)
+    log -d "file=${file}"
+    if [ -z ${file} ] || [ -z $2 ]; then
+        log -w "need target name and dest path!"
+        return 1
+    elif [ ! -x ${file} ]; then
+        log -e "file not found : $1"
+    else
+        log -d "file=${file}"
+        local wsl_mount_path=$(findmnt -n -T ${file} | cut -d" " -f 1)
+        local win_mount_path=$(findmnt -n -T ${file} | cut -d" " -f 2 | sed 's/\\//g')
+        log -d "wsl_mount_path=${wsl_mount_path}"
+        log -d "win_mount_path=${win_mount_path}"
+        # local win_target=$(realpath $1 | sed "s+${wsl_mount_path}+${win_mount_path}+g");
+        local win_target=$(realpath $1 | sed 's/^\/mnt\///' | sed 's/\//\\/g' | sed 's/^./\0:/')
+        echo "win_target=${win_target}"
+
+        # local target=$(realpath $1 | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/')
+        log -d "target=${win_target} $2"
+        cmd.exe /C "copy ${win_target} $2"
+        explorer.exe $2
+    fi
+
+    if [ ! -z "${WORKSPACE_PROJECT}" ]; then
+        set_tabtitle ${WORKSPACE_PROJECT}
+    fi
+}
+
+function cmd_mv() {
+    local mv_result=$(cmd_copy $@);
+    log -d "mv_result=${mv_result}"
+    if [ -z ${mv_result} ]; then
+        log -w "failed"
+    else
+        log -w "success"
+    fi
+}
+
+function explorer() {
+    # Check if the script is running in WSL
+    local USABLE_EXPLORER_TAB=false
+    if [ -n "$WSL_DISTRO_NAME" ]; then
+        # Check if the script is running in WSL2
+        if grep -q "wsl2" /proc/version; then
+            USABLE_EXPLORER_TAB=true
+        fi
+    fi
+    local curr_path=$(wslpath -w $(pwd))
+    local arguments=()
+    # WSL 경로를 Windows 경로로 변환
+    if [ -z "$curr_path" ]; then
+        log -e "Error: Unable to convert WSL path to Windows path."
+        return 1
+    elif [ -z "$1" ]; then
+        # If no arguments are provided, open the current directory
+        log -i "explorer.exe $curr_path"
+        explorer.exe "$curr_path"
+    else
+        # If arguments are provided, open each one
+        for target in "$@"; do
+            if [ -e "$target" ]; then
+                # Convert the target path to Windows format
+                local win_target=$(wslpath -w "$target")
+                if $USABLE_EXPLORER_TAB; then
+                    arguments+=("$win_target")
+                else
+                    log -i "explorer.exe ${win_target}"
+                    explorer.exe "${win_target}"
+                fi
+                # Append the converted path to the arguments
+            else
+                log -w "File or directory not found: $target"
+            fi
+        done
+        
+        if [ ${#arguments[@]} -gt 0 ]; then
+            log -i "explorer.exe ${arguments[@]}"
+            explorer.exe "${arguments[@]}"
+        fi
+    fi
+
+    return 0
+}

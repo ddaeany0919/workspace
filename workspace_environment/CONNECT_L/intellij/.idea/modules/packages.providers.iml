@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../packages/providers">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/BlockedNumberProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/BlockedNumberProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/BlockedNumberProvider/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/BookmarkProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/BookmarkProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/CalendarProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/CalendarProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/CalendarProvider/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/CallLogProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/CallLogProvider/tests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/ContactsProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/ContactsProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/ContactsProvider/test_common/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/DownloadProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/DownloadProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/DownloadProvider/ui/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/DownloadProvider/ui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/ContactsProvider/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/ContactsProvider/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/DownloadProvider/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/apex" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/errorprone" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/jni" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/legacy" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/MediaProvider/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/PartnerBookmarksProvider" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/TelephonyProvider" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/TvProvider" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/providers/UserDictionaryProvider" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+  </component>
+</module>

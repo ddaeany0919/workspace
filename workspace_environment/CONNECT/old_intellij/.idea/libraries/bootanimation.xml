@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bootanimation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/services/Car/car_product/car_ui_portrait/bootanimation/bootanimation.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

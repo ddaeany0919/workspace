@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/core">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/res" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/xsd" />
+    </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.base.graphic" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="services.core.unboosted" level="project" />
+    <orderEntry type="library" name="core-libart" level="project" />
+    <orderEntry type="library" name="android.car.watchdoglib" level="project" />
+    <orderEntry type="library" name="mobis.framework" level="project" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+  </component>
+</module>

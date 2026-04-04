@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="android.automotive.watchdog.internal-V2-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/cpp/watchdog/aidl/android.automotive.watchdog.internal-V2-java/android_common/turbine-combined/android.automotive.watchdog.internal-V2-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/automotive/vehicle/2.0/android.hardware.automotive.vehicle-V2.0-java/android_common/turbine-combined/android.hardware.automotive.vehicle-V2.0-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

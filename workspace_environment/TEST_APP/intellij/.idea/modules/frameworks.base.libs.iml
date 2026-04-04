@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/libs">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/WindowManager/Jetpack/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/WindowManager/Jetpack/tests/unittest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/WindowManager/Shell/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/WindowManager/Shell/tests/flicker/test-apps/flickerapp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/WindowManager/Shell/tests/unittest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/dream/lowlight/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/dream/lowlight/tests/src/com.android.dream.lowlight" isTestSource="false" packagePrefix="com.android.dream.lowlight" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/apex/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/usb/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/usb/tests/AccessoryChat/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/androidfw" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hostgraphics" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/canvas" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/effects" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/hwui" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/jni" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/pipeline" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/private" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/protos" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/renderstate" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/renderthread" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/service" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/shader" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/thread" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/hwui/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/incident" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/input" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/libs/protoutil" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="frameworks.base.graphic" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+  </component>
+</module>

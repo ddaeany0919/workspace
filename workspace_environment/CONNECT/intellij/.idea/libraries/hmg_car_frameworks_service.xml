@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hmg-car-frameworks-service">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../vendor/hmg/packages/services/Car/car-service-helper/prebuilts/hmg-car-frameworks-service.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

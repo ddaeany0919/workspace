@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="android.car">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/car-lib/android.car/android_common/turbine-combined/android.car.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/automotive/vehicle/aidl/android.hardware.automotive.vehicle-V2-java/android_common/turbine-combined/android.hardware.automotive.vehicle-V2-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/automotive/vehicle/aidl_property/android.hardware.automotive.vehicle.property-V2-java/android_common/turbine-combined/android.hardware.automotive.vehicle.property-V2-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen/aapt2/R" />
+      <root url="file://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/car-lib/android.car/android_common/javac/classes" />
+    </SOURCES>
+  </library>
+</component>

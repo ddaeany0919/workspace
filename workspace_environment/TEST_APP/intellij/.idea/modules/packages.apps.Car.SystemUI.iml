@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/apps/Car/SystemUI">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/apps/Car/SystemUI/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="external.jsr330" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+  </component>
+</module>

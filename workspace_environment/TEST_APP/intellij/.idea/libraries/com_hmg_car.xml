@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.hmg.car">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../release/gradle/SDK/platforms/android-33/optional/hmg.car.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/car-base/service/com.hmg.car.base/android_common/turbine-combined/com.hmg.car.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/car-lib/hmg.car/android_common/turbine-combined/hmg.car.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

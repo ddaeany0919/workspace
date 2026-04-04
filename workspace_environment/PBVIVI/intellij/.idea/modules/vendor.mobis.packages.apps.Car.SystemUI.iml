@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-climate" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-gnb" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-keyguard" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-statusbar" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-userprofile" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/res-wifi" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/SystemUI/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="module" module-name="vendor.mobis.packages.apps.Car.ControlCenter" />
+    <orderEntry type="module" module-name="vendor.mobis.packages.apps.Car.Apps" />
+    <orderEntry type="module" module-name="packages.services" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+  </component>
+</module>

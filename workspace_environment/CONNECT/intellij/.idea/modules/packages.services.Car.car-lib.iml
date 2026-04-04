@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/services/Car/car-lib">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car-lib/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="packages.services.Car.car-builtin-lib" />
+    <orderEntry type="library" name="android.car" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+  </component>
+</module>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android.hidl.manager-V1.2-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/system/libhidl/transport/manager/1.2/android.hidl.manager-V1.2-java/android_common/turbine-combined/android.hidl.manager-V1.2-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

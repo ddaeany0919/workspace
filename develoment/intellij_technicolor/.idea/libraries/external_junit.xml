@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="external_junit">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../external/junit/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/src/main/res" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 38 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="packages.services" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/services/GlobalSearchService/GlobalSearchInterfaceHmi-lib/android_common/javac/GlobalSearchInterfaceHmi-lib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/services/GlobalSearchService/GlobalSearchInterfaceHmi-lib/android_common/kotlin/GlobalSearchInterfaceHmi-lib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,84 @@
+timeout 600
+verbose on
+print "flash partition"
+
+#goto update_row
+goto update_middle
+
+update_row:
+  print "##### update_row #####"
+  expect {
+    "Copyright (C) 2019 Broadcom"
+  }
+  send "^C"
+
+  send "usb init"
+  send "fbflash usbdisk0:gpt.bin flash0"
+  send "fbflash usbdisk0:android_bsu.elf flash0.bsu"
+  send "fbflash usbdisk0:bolt_tmau400.bin flash1"
+  goto update_middle
+
+update_middle:
+  print "##### update_middle #####"
+  expect {
+    "Copyright (C) 2019 Broadcom"
+  }
+  send "^C"
+
+  print "##### update_middle #####"
+  send "usb init"
+  expect {
+    "TMAU400>"
+  }
+  print "+++++ boot_i +++++"
+  send "fbflash usbdisk0:boot.img flash0.boot_i"
+  print "----- boot_i -----"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:boot.img flash0.boot_e"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:vendor.img flash0.vendor_i"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:vendor.img flash0.vendor_e"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:product.img flash0.product_i"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:product.img flash0.product_e"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:system.img flash0.system_i"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:system.img flash0.system_e"
+  goto update_high
+
+update_high:
+  print "##### update_high #####"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:cache.img flash0.cache"
+  expect {
+    "TMAU400>"
+  }
+  send "fbflash usbdisk0:userdata.img flash0.userdata"
+
+
+#########################
+# panic subroutine      #
+#########################
+# panic kill
+panic:
+  print \n!!!!!!Bye Bye Minicom!!!!!!!\n
+  ! killall -15 minicom

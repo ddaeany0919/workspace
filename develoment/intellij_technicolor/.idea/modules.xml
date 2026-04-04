@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/framework_base.iml" filepath="$PROJECT_DIR$/framework_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/synaptics_vendor.iml" filepath="$PROJECT_DIR$/synaptics_vendor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/technicolor_common.iml" filepath="$PROJECT_DIR$/technicolor_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/technicolor_vendor.iml" filepath="$PROJECT_DIR$/technicolor_vendor.iml" />
+    </modules>
+  </component>
+</project>

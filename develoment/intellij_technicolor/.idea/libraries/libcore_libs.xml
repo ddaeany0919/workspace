@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libcore_libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/libcore/mmodules/core_platform_api/core.platform.api.stubs/android_common/javac/core.platform.api.stubs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

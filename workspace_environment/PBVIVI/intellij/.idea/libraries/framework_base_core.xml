@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="framework.base.core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../frameworks/base/core/java" />
+    </SOURCES>
+  </library>
+</component>

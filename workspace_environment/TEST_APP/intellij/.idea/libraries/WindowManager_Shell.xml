@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="WindowManager-Shell">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/frameworks/base/libs/WindowManager/Shell/WindowManager-Shell/android_common/turbine-combined/WindowManager-Shell.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

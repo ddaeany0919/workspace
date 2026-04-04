@@ -1,0 +1,3 @@
+loop 100000
+KEY_CHANNELUP
+sleep 5

@@ -1,0 +1,570 @@
+############### COMMON ###############
+
+# mcd:          Makes new Dir and jumps inside
+
+DEBUG=false
+
+function reload() {
+    source ${WORKSPACE_ROOT}/bin/.bashrc_luis
+}
+
+function mkdir_cd () { 
+    if [ -z "$1" ]; then
+        log -w "mcd: no directory name provided"
+        return 1
+    fi
+    if [ -d "$1" ]; then
+        log -w "mcd: directory already exists"
+        return 1
+    fi
+    do_execute -i "mkdir -p $1";
+    if [ $? -ne 0 ]; then
+        log -w "mkdir: failed to create directory"
+        return 1
+    fi
+    cd "$1"
+    
+}
+
+# zipf:         To create a ZIP archive of a folder
+function zipf () { zip -r "$1".zip "$1" ; }
+
+# extract:  Extract most know archives with one command
+# ---------------------------------------------------------
+function extract () {
+    local directory="${1%.*}"
+    if [ -d ${directory} ]; then
+        mkdir ${directory};
+    fi
+
+    if [ -f $1 ] ; then
+        case $1 in
+        *.tar.bz2)   tar xjf $1     --directory ${directory};;
+        *.tar.gz)    tar xzf $1     --directory ${directory};;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      --directory ${directory};;
+        *.tbz2)      tar xjf $1     --directory ${directory};;
+        *.tgz)       tar xzf $1     --directory ${directory};;
+        *.zip)       unzip $1       -d ${directory};;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     log -w "'$1' cannot be extracted via extract()" ;;
+            esac
+        else
+            log -w "'$1' is not a valid file"
+        fi
+}
+
+function ggrep() {
+    find . -name .repo -prune -o -name .git -prune -o -name out -prune -o -type f -name "*\.gradle" \
+        -exec grep --color -n "$@" {} +
+}
+
+function jgrep() {
+    find . -name .repo -prune -o -name .git -prune -o -name out -prune -o -type f -name "*\.java" \
+        -exec grep --color -n "$@" {} +
+}
+
+function cgrep() {
+    find . -name .repo -prune -o -name .git -prune -o -name out -prune -o -type f \( -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' \) \
+        -exec grep --color -n "$@" {} +
+}
+
+function resgrep() {
+    local dir
+    for dir in `find . -name .repo -prune -o -name .git -prune -o -name out -prune -o -name res -type d`; do
+        find $dir -type f -name '*\.xml' -exec grep --color -n "$@" {} +
+    done
+}
+
+function mangrep() {
+    find . -name .repo -prune -o -name .git -prune -o -path ./out -prune -o -type f -name 'AndroidManifest.xml' \
+        -exec grep --color -n "$@" {} +
+}
+
+function sepgrep() {
+    find . -name .repo -prune -o -name .git -prune -o -path ./out -prune -o -name sepolicy -type d \
+        -exec grep --color -n -r --exclude-dir=\.git "$@" {} +
+}
+
+function rcgrep() {
+    find . -name .repo -prune -o -name .git -prune -o -name out -prune -o -type f -name "*\.rc*" \
+        -exec grep --color -n "$@" {} +
+}
+
+function timestamp() {
+    local ts=$1;
+    if [[ -z $1 ]]; then
+        ts=$(date  +%s%3N)
+    fi
+    local result=$(date +%D\ %T -d @${ts:0:10} | cut -d '+' -f 1).${ts:10}
+    log -i "date=$result ($ts)"
+}
+
+function __remove_from_path() {
+    DIR=$1
+    # echo "----PATH=$PATH"
+    # echo "----IFS=$IFS"
+    # echo "----DIR=$DIR"
+    NEWPATH=
+    # OLD_IFS=$IFS
+    # IFS=:
+    for p in ${PATH}; do
+        if [ $p != $DIR ]; then
+            NEWPATH=${NEWPATH:+$NEWPATH:}$p
+        fi
+    done
+    # IFS=$OLD_IFS
+    PATH=$NEWPATH
+}
+
+case "$OS" in
+    Darwin)
+        function mgrep() {
+            find -E . -name .repo -prune -o -name .git -prune -o -path ./out -prune -o \( -iregex '.*/(Makefile|Makefile\..*|.*\.make|.*\.mak|.*\.mk|.*\.bp)' -o -regex '(.*/)?soong/[^/]*.go' \) -type f \
+                -exec grep --color -n "$@" {} +
+        }
+
+        function treegrep() {
+            find -E . -name .repo -prune -o -name .git -prune -o -type f -iregex '.*\.(c|h|cpp|hpp|S|java|xml)' \
+                -exec grep --color -n -i "$@" {} +
+        }
+        ;;
+    *)
+        function mgrep() {
+            find . -name .repo -prune -o -name .git -prune -o -path ./out -prune -o \( -regextype posix-egrep -iregex '(.*\/Makefile|.*\/Makefile\..*|.*\.make|.*\.mak|.*\.mk|.*\.bp)' -o -regextype posix-extended -regex '(.*/)?soong/[^/]*.go' \) -type f \
+                -exec grep --color -n "$@" {} +
+        }
+
+        function treegrep() {
+            find . -name .repo -prune -o -name .git -prune -o -regextype posix-egrep -iregex '.*\.(c|h|cpp|hpp|S|java|xml)' -type f \
+                -exec grep --color -n -i "$@" {} +
+        }
+        ;;
+esac
+
+function set_tabtitle () {
+    local title=$1;
+    if [ ! -z ${WORKSPACE_ENV_TERMINAL_TITLE} ]; then
+        title=$WORKSPACE_ENV_TERMINAL_TITLE;
+    fi
+
+    if [ -z "$SSH_CLIENT" ]; then
+        echo -ne '\033]0;'"${title}"'\a'
+    else
+        local localHostname=$HOSTNAME;
+        if [ ! -z ${WORKSPACE_ENV_HOSTNAME} ]; then
+            localHostname=${WORKSPACE_ENV_HOSTNAME};
+        fi
+        echo -ne '\033]0;'"<${localHostname}> ${title} "'\a'
+    fi
+}
+
+
+
+############### WORKSPACE ###############
+# update to an workspace
+function workspace {
+    local project_path="$WORKSPACE_ROOT/1.Projects/${WORKSPACE_PROJECT}"
+    local param=${*: -1}
+    
+    log -d "workspace: project_path=${project_path}"
+    log -d "workspace: WORKSPACE_PROJECT=${WORKSPACE_PROJECT}"
+    log -d "workspace: param=${param}"
+    log -d "workspace: params=$#"
+
+    if [ $# = 0 ]; then
+        if [ -z ${WORKSPACE_PROJECT} ]; then
+            log -w "must need an project name!!!!"
+        elif [ ! -f ${project_path}/workspace ]; then
+            log -w "not found the ${project_path}/workspace"
+        else
+            ${project_path}/workspace;
+        fi
+    else
+        if [ "-l" = "${param}" ]; then
+            ls -c $WORKSPACE_ROOT/1.Projects/
+        else
+            project_path="$WORKSPACE_ROOT/1.Projects/${param}"
+            local project_link=${HOME}/${param}
+            log -d "workspace: set project_path=${project_path}"
+
+            log -i "Environment of workspace set to \"${param}\""
+
+            # 1. make workspace environment
+            if [ ! -d ${project_path} ]; then
+                log -i "Creating workspace for ${param} at ${project_path}"
+                # create project path
+                if [ -d ${WORKSPACE_ROOT}/1.Projects ]; then
+                    log -d "workspace: create project_path=${project_path}"
+                    mkdir -p ${project_path}
+                    if [ -d ${WORKSPACE_ROOT}/bin/workspace_environment/${param} ]; then
+                        log -d "workspace: link workspace environment to ${project_path}"
+                        ln -s ${WORKSPACE_ROOT}/bin/workspace_environment/${param} ${project_path}/.workspace_env
+                        ln -s ${project_path}/.workspace_env/bin/main.sh ${project_path}/workspace
+                    fi
+                else
+                    log -w "not found the workspace root directory: ${WORKSPACE_ROOT}/1.Projects"
+                    return 1
+                fi
+            fi
+
+            
+            
+            # check symbol link or creating
+            if [ -L ${project_link} ] ; then
+                if [ ! -e ${project_link} ] ; then
+                    ln -s ${project_path} ${project_link} 
+                fi
+                # 2. remove a previous workspace's config
+                log -d "WORKSPACE_HOME: ${WORKSPACE_HOME}"
+                # if $DEBUG; then
+                #     while read -d ':' _path; do
+                #         log -d "org path=$_path"
+                #     done <<< "$PATH:"
+                # fi
+                if [ ! -z ${WORKSPACE_HOME} ]; then
+                    # 2-1. remove a previous path
+                    log -d "WORKSPACE_ENV_PATH: ${WORKSPACE_ENV_PATH}"
+                    if [[ ! -z ${WORKSPACE_ENV_PATH} ]]; then
+                        # OLD_IFS=$IFS
+                        # IFS=:
+                        # echo "${WORKSPACE_ENV_PATH}"|tr ':' ' '
+                        for p in ${WORKSPACE_ENV_PATH//:/ } ; do
+                            log -d "remove_from_path=${p}"
+                            OLD_IFS=$IFS
+                            IFS=:
+                            __remove_from_path ${p}
+                            IFS=$OLD_IFS
+                        done
+                        # IFS=$OLD_IFS
+                        
+                    fi
+
+                    # 2-2. remove other variables
+                    _vars=`env | grep WORKSPACE_ | cut -d"=" -f1`
+                    while read _var; do 
+                        log -d "unset $_var"
+                        unset $_var;
+                    done <<< ${_vars}
+                    unset WORKSPACE_ENV_PATH;
+                fi
+
+                unset WORKSPACE_PROJECT_TYPE
+                unset ANDROID_SERIAL
+
+                alias go_workspace="cd ${project_path}"
+                export WORKSPACE_PROJECT="${param}"
+                export WORKSPACE_HOME="${project_path}"
+                export WORKSPACE_PRODUCT_NAME=`echo "$WORKSPACE_PROJECT" | tr '[:upper:]' '[:lower:]'`
+
+                local env_home="${WORKSPACE_HOME}/.workspace_env"
+                local env_config="${env_home}/environments"
+                
+                 # make READM.md symbol link
+                if [ -f ${env_home}/README.md ]; then
+                    if [ ! -f ${WORKSPACE_HOME}/README.md ]; then
+                        log "create symbol link for README.md"
+                        ln -s ${env_home}/README.md ${WORKSPACE_HOME}/README.md
+                    fi
+                fi
+                # update workspace environment
+                if [ -x ${env_config} ]; then
+                    log -d "load env config=${env_config}"
+                    local projectType=$(grep WORKSPACE_PROJECT_TYPE ${env_config} | cut -d\" -f2)
+
+                     # check project type
+                    for type in ${projectType[@]}; do 
+                        case ${type} in
+                            "ANDROID")
+                                # ANDROID_SERIAL by TARGET IP
+                                if [ -f ${WORKSPACE_HOME}/.workspace_env/TARGET_IP ]; then
+                                    export ANDROID_SERIAL=$(cat ${WORKSPACE_HOME}/.workspace_env/TARGET_IP)
+                                fi
+
+                                # if exists logcat-color-config in workspace env, use it
+                                if [ -f ${env_home}/logcat-color-config ]; then
+                                    export WORKSPACE_LOGCAT_CONFIG=${env_home}/logcat-color-config
+                                fi
+
+                                source ${WORKSPACE_ROOT}/bin/android/common_android.sh;
+
+                                # path of android
+                                WORKSPACE_ENV_PATH=${WORKSPACE_ROOT}/bin/android
+                                
+
+                                export BUILD_OUT="${HOME}/${WORKSPACE_PROJECT}_out"
+
+                                # check symbol link of build out or create
+                                if [[ ! -z ${BUILD_OUT} ]]; then
+                                    if [ -d ${project_path}/.repo ] && [ ! -L ${project_link}_out ]; then
+                                        ln -s ${project_link}/out/target/product/${WORKSPACE_PRODUCT_NAME} ${project_link}_out;
+                                    elif [ ! -z "${ANDROID_OUTPUT}" ] && [ ! -L ${project_path}/build_out ]; then
+                                        ln -s ${ANDROID_OUTPUT} ${project_path}/build_out
+                                    fi
+                                fi
+                                ;;
+                             "AAOS")
+                                # ANDROID_SERIAL by TARGET IP
+                                if [ -f ${WORKSPACE_HOME}/.workspace_env/TARGET_IP ]; then
+                                    export ANDROID_SERIAL=$(cat ${WORKSPACE_HOME}/.workspace_env/TARGET_IP)
+                                fi
+
+                                
+                                # if exists logcat-color-config in workspace env, use it
+                                if [ -f ${env_home}/logcat-color-config ]; then
+                                    export WORKSPACE_LOGCAT_CONFIG=${env_home}/logcat-color-config
+                                fi    
+                                
+
+                                source ${WORKSPACE_ROOT}/bin/android/common_android.sh;
+
+                                # path of android
+                                WORKSPACE_ENV_PATH=${WORKSPACE_ROOT}/bin/android
+                                
+
+                                export BUILD_OUT="${HOME}/${WORKSPACE_PROJECT}_out"
+
+                                # check symbol link of build out or create
+                                # if [[ ! -z ${BUILD_OUT} ]]; then
+                                #     if [ -d ${project_path}/.repo ] && [ ! -L ${project_link}_out ]; then
+                                #         ln -s ${project_link}/out/target/product/${WORKSPACE_PRODUCT_NAME} ${project_link}_out;
+                                #     elif [ ! -z "${ANDROID_OUTPUT}" ] && [ ! -L ${project_path}/build_out ]; then
+                                #         ln -s ${ANDROID_OUTPUT} ${project_path}/build_out
+                                #     fi
+                                # fi
+                                ;;
+                        esac
+                    done
+                fi
+           
+                if [[ $WORKSPACE_WITHOUT_ENV_PATH ]]; then
+                    log -w "ignore env path=${WORKSPACE_WITHOUT_ENV_PATH}"
+                    unset WORKSPACE_ENV_PATH
+                    # PATH=${PATH}
+                else
+                    if [ -d ${env_home}/bin ]; then
+                        if [[ ! -z ${WORKSPACE_ENV_PATH} ]]; then
+                            WORKSPACE_ENV_PATH=${env_home}/bin:${WORKSPACE_ENV_PATH}
+                        else
+                            WORKSPACE_ENV_PATH=${env_home}/bin
+                        fi
+                    fi
+                    if [ ! -z "${WORKSPACE_ENV_PATH}" ]; then
+                        log -d "apply env path=${WORKSPACE_ENV_PATH}"
+                        PATH=${PATH}:${WORKSPACE_ENV_PATH}
+                    fi
+                fi
+                # load project enviroments
+                if [ -x ${env_config} ]; then
+                    source ${env_config}
+                fi
+
+                
+                if $DEBUG; then
+                    while read -d ':' _path; do
+                        log -d "after path=$_path"
+                    done <<< "$PATH:"
+                fi
+                # export WORKSPACE_ENV_PATH="${project_env_path}"
+                # for sharing with SSH
+                if [[ -z ${SSH_CLIENT} ]]; then 
+                    export LC_WORKSPACE_PROJECT="${param}"
+                    export LC_WORKSPACE_PRODUCT_NAME="${WORKSPACE_PRODUCT_NAME}"
+                fi
+
+                # update PS1
+                source $WORKSPACE_ROOT/bin/ps1.sh
+
+                # update tab title
+                set_tabtitle ${WORKSPACE_PROJECT}
+
+                # go to workspace path
+                cd ${project_path}
+            else
+                ln -s ${project_path} ${project_link} 
+            fi
+            
+            # 2. remove a previous workspace's config
+            log -d "WORKSPACE_HOME: ${WORKSPACE_HOME}"
+            # if $DEBUG; then
+            #     while read -d ':' _path; do
+            #         log -d "org path=$_path"
+            #     done <<< "$PATH:"
+            # fi
+            if [ ! -z ${WORKSPACE_HOME} ]; then
+                # 2-1. remove a previous path
+                log -d "WORKSPACE_ENV_PATH: ${WORKSPACE_ENV_PATH}"
+                if [[ ! -z ${WORKSPACE_ENV_PATH} ]]; then
+                    # OLD_IFS=$IFS
+                    # IFS=:
+                    # echo "${WORKSPACE_ENV_PATH}"|tr ':' ' '
+                    for p in ${WORKSPACE_ENV_PATH//:/ } ; do
+                        log -d "remove_from_path=${p}"
+                        OLD_IFS=$IFS
+                        IFS=:
+                        __remove_from_path ${p}
+                        IFS=$OLD_IFS
+                    done
+                    # IFS=$OLD_IFS
+                    
+                fi
+
+                # 2-2. remove other variables
+                _vars=`env | grep WORKSPACE_ | cut -d"=" -f1`
+                while read _var; do 
+                    log -d "unset $_var"
+                    unset $_var;
+                done <<< ${_vars}
+                unset WORKSPACE_ENV_PATH;
+            fi
+
+            unset WORKSPACE_PROJECT_TYPE
+            unset ANDROID_SERIAL
+
+            alias go_workspace="cd ${project_path}"
+            export WORKSPACE_PROJECT="${param}"
+            export WORKSPACE_HOME="${project_path}"
+            export WORKSPACE_PRODUCT_NAME=`echo "$WORKSPACE_PROJECT" | tr '[:upper:]' '[:lower:]'`
+
+            local env_home="${WORKSPACE_HOME}/.workspace_env"
+            local env_config="${env_home}/environments"
+            
+                # make READM.md symbol link
+            if [ -f ${env_home}/README.md ]; then
+                if [ ! -f ${WORKSPACE_HOME}/README.md ]; then
+                    log "create symbol link for README.md"
+                    ln -s ${env_home}/README.md ${WORKSPACE_HOME}/README.md
+                fi
+            fi
+            # update workspace environment
+            if [ -x ${env_config} ]; then
+                log -d "load env config=${env_config}"
+                local projectType=$(grep WORKSPACE_PROJECT_TYPE ${env_config} | cut -d\" -f2)
+
+                    # check project type
+                for type in ${projectType[@]}; do 
+                    case ${type} in
+                        "ANDROID")
+                            # ANDROID_SERIAL by TARGET IP
+                            if [ -f ${WORKSPACE_HOME}/.workspace_env/TARGET_IP ]; then
+                                export ANDROID_SERIAL=$(cat ${WORKSPACE_HOME}/.workspace_env/TARGET_IP)
+                            fi
+
+                            source ${WORKSPACE_ROOT}/bin/android/common_android.sh;
+
+                            # path of android
+                            WORKSPACE_ENV_PATH=${WORKSPACE_ROOT}/bin/android
+
+                            # if exists logcat-color-config in workspace env, use it
+                            if [ -f ${env_home}/logcat-color-config ]; then
+                                export WORKSPACE_LOGCAT_CONFIG=${env_home}/logcat-color-config
+                            fi
+                            
+
+                            export BUILD_OUT="${HOME}/${WORKSPACE_PROJECT}_out"
+
+                            # check symbol link of build out or create
+                            if [[ ! -z ${BUILD_OUT} ]]; then
+                                if [ -d ${project_path}/.repo ] && [ ! -L ${project_link}_out ]; then
+                                    ln -s ${project_link}/out/target/product/${WORKSPACE_PRODUCT_NAME} ${project_link}_out;
+                                elif [ ! -z "${ANDROID_OUTPUT}" ] && [ ! -L ${project_path}/build_out ]; then
+                                    ln -s ${ANDROID_OUTPUT} ${project_path}/build_out
+                                fi
+                            fi
+                            ;;
+                            "AAOS")
+                            # ANDROID_SERIAL by TARGET IP
+                            if [ -f ${WORKSPACE_HOME}/.workspace_env/TARGET_IP ]; then
+                                export ANDROID_SERIAL=$(cat ${WORKSPACE_HOME}/.workspace_env/TARGET_IP)
+                            fi
+
+                            source ${WORKSPACE_ROOT}/bin/android/common_android.sh;
+
+                            # path of android
+                            WORKSPACE_ENV_PATH=${WORKSPACE_ROOT}/bin/android
+
+                            # if exists logcat-color-config in workspace env, use it
+                            if [ -f ${env_home}/logcat-color-config ]; then
+                                export WORKSPACE_LOGCAT_CONFIG=${env_home}/logcat-color-config
+                            fi
+                            
+
+                            export BUILD_OUT="${HOME}/${WORKSPACE_PROJECT}_out"
+
+                            # check symbol link of build out or create
+                            # if [[ ! -z ${BUILD_OUT} ]]; then
+                            #     if [ -d ${project_path}/.repo ] && [ ! -L ${project_link}_out ]; then
+                            #         ln -s ${project_link}/out/target/product/${WORKSPACE_PRODUCT_NAME} ${project_link}_out;
+                            #     elif [ ! -z "${ANDROID_OUTPUT}" ] && [ ! -L ${project_path}/build_out ]; then
+                            #         ln -s ${ANDROID_OUTPUT} ${project_path}/build_out
+                            #     fi
+                            # fi
+                            ;;
+                    esac
+                done
+            fi
+        
+            if [[ $WORKSPACE_WITHOUT_ENV_PATH ]]; then
+                log -w "ignore env path=${WORKSPACE_WITHOUT_ENV_PATH}"
+                unset WORKSPACE_ENV_PATH
+                # PATH=${PATH}
+            else
+                if [ -d ${env_home}/bin ]; then
+                    if [[ ! -z ${WORKSPACE_ENV_PATH} ]]; then
+                        WORKSPACE_ENV_PATH=${env_home}/bin:${WORKSPACE_ENV_PATH}
+                    else
+                        WORKSPACE_ENV_PATH=${env_home}/bin
+                    fi
+                fi
+                if [ ! -z "${WORKSPACE_ENV_PATH}" ]; then
+                    log -d "apply env path=${WORKSPACE_ENV_PATH}"
+                    PATH=${PATH}:${WORKSPACE_ENV_PATH}
+                fi
+            fi
+            # load project enviroments
+            if [ -x ${env_config} ]; then
+                source ${env_config}
+            fi
+
+            
+            if $DEBUG; then
+                while read -d ':' _path; do
+                    log -d "after path=$_path"
+                done <<< "$PATH:"
+            fi
+            # export WORKSPACE_ENV_PATH="${project_env_path}"
+            # for sharing with SSH
+            if [[ -z ${SSH_CLIENT} ]]; then 
+                export LC_WORKSPACE_PROJECT="${param}"
+                export LC_WORKSPACE_PRODUCT_NAME="${WORKSPACE_PRODUCT_NAME}"
+            fi
+
+            # update PS1
+            source $WORKSPACE_ROOT/bin/ps1.sh
+
+            # update tab title
+            set_tabtitle ${WORKSPACE_PROJECT}
+
+            # go to workspace path
+            cd ${project_path}
+        fi
+    
+    fi
+}
+
+# for completion for workspace_apply
+if [ -d $WORKSPACE_ROOT/1.Projects ]; then
+    complete -W "`ls -c $WORKSPACE_ROOT/1.Projects/`" workspace
+    for prj in $(ls -c $WORKSPACE_ROOT/1.Projects); do 
+        alias "$prj=workspace $prj"; 
+    done
+fi
+
+############### ANDROID ###############
+
+
+############### ANDROID ###############
+

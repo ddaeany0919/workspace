@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res-generate" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/res-overlayable" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/Notification/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 38 Platform" jdkType="Android SDK" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+    <orderEntry type="library" name="mobis.framework.core" level="project" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="packages.services" />
+  </component>
+</module>

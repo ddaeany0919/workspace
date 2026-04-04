@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../vendor/hmg/packages/services/Car/plugins/camera/car-lib">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../vendor/hmg/packages/services/Car/plugins/camera/car-lib/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+  </component>
+</module>

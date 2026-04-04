@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/opt">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/bitmap/sample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/bitmap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/calendar/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/calendar/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/services/builtInServices/host_tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/services/builtInServices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/services/builtInServices/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/services/updatableServices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/services/updatableServices/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/setupwizard/library/main/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/setupwizard/library/main/tests/robotests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/car/setupwizard/library/utils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/chips/sample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/chips/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/chips/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/colorpicker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/localepicker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/localepicker/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/ims/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/ims/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/voip/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/wifi/libs/WifiTrackerLib/sdk_src/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/wifi/libs/WifiTrackerLib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/net/wifi/libs/WifiTrackerLib/tests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/photoviewer/activity/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/photoviewer/appcompat/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/photoviewer/sample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/photoviewer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/gingerbread/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/gingerbread/test/instrumentation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/gingerbread/test/robotest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/main/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/platform/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/platform/test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/recyclerview/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/recyclerview/test/instrumentation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/recyclerview/test/robotest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/test/instrumentation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/setupwizard/library/test/robotest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/telephony/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/telephony/telephony-resources" isTestSource="false" packagePrefix="com.android.telephony.resources" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/telephony/testing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/telephony/tests/telephonytests/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/timezonepicker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/tv/tvsystem/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/vcard/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/opt/vcard/tests/src/com/android/vcard/tests" isTestSource="false" packagePrefix="com.android.vcard" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="android.car.watchdoglib" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="android.hidl.manager-V1.2-java" level="project" />
+    <orderEntry type="library" name="android.car" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+  </component>
+</module>

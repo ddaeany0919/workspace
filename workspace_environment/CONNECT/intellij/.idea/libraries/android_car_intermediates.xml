@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android.car_intermediates">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/target/common/obj/JAVA_LIBRARIES/android.car_intermediates/classes-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="services.core.unboosted">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/frameworks/base/services/core/services.core.unboosted/android_common/turbine/services.core.unboosted.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

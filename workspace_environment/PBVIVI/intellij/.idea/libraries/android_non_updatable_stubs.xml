@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android-non-updatable.stubs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/frameworks/base/android-non-updatable.stubs/android_common/turbine/android-non-updatable.stubs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

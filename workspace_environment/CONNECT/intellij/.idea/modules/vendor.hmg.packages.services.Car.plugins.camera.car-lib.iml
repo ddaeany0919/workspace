@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/camera/car-lib">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/camera/car-lib/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="vendor.hmg.packages.services.Car.car-base.car-lib" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/camera/car-lib/hmg.car.plugin.camera/android_common/turbine-combined/hmg.car.plugin.camera.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+  </component>
+</module>

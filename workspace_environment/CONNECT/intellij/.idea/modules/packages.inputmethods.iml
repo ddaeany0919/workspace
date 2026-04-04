@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../packages/inputmethods">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/common/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/java/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/tests" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LeanbackIME/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LeanbackIME/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/dictionaries" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/native" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../packages/inputmethods/LatinIME/tools" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+  </component>
+</module>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks/ccs/htelephony" isTestSource="false" packagePrefix="ccos.telephony" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks/ethIP/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks/phoneprojection/androidautoservice/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/frameworks/phoneprojection/carplayservice/src" isTestSource="false" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="androidx" level="project" />
+  </component>
+</module>

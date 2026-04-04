@@ -1,0 +1,29 @@
+Host *
+    ForwardAgent no
+    ForwardX11 no
+    ForwardX11Trusted yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+
+Host gitolite.bundang gitolite.bundang.ap.thmulti.com
+    HostName 10.17.160.91
+    User git
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+
+Host vm
+    HostName 10.17.160.130
+    User ubuntu
+
+Host svr
+    HostName 10.17.160.150
+    User sskim
+
+Host nas
+        HostName sara-luis.iptime.org
+        User luis
+        Port 24680
+
+Host Android-B6
+    HostName 10.17.160.89
+    User sangsoo.kim

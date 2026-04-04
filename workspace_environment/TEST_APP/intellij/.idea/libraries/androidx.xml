@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="androidx">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../prebuilts/sdk/current/androidx/m2repository/androidx/room/room-common/2.5.0-alpha01/room-common-2.5.0-alpha01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/prebuilts/sdk/current/androidx/androidx.recyclerview_recyclerview/android_common/turbine-combined/androidx.recyclerview_recyclerview.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/prebuilts/sdk/current/androidx-legacy/androidx.localbroadcastmanager_localbroadcastmanager/android_common/turbine-combined/androidx.localbroadcastmanager_localbroadcastmanager.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/prebuilts/sdk/current/androidx/androidx.annotation_annotation/android_common/turbine-combined/androidx.annotation_annotation.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

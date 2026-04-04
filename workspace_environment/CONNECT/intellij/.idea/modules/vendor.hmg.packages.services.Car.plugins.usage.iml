@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/usage">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/usage/car-lib/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="module" module-name="vendor.hmg.packages.services.Car.car-base" />
+    <orderEntry type="library" name="hmg.car.plugins.aidl" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/usage/service/prebuilts/com.hmg.car.plugin.usage-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

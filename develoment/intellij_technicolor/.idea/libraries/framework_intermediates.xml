@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="framework_intermediates">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../out/soong/.intermediates/frameworks/base/services/core/services.core.unboosted/android_common/gen/logtags/frameworks/base/services/core/java" />
+    </SOURCES>
+  </library>
+</component>

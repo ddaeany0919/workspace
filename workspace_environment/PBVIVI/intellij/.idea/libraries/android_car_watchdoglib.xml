@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android.car.watchdoglib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/cpp/watchdog/car-watchdog-lib/android.car.watchdoglib/android_common/turbine/android.car.watchdoglib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

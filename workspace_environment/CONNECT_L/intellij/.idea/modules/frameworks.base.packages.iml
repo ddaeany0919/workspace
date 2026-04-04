@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/packages">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/AppPredictionLib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/BackupEncryption/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/BackupEncryption/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/BackupRestoreConfirmation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/CarSystemUI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/CarrierDefaultApp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/CompanionDeviceManager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/DynamicSystemInstallationService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/EasterEgg/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/EncryptedLocalTransport/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/ExtShared/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/ExternalStorageProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/FakeOemFeatures/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/FusedLocation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/InputDevices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/LocalTransport/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/OsuLogin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/PackageInstaller/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/PrintRecommendationService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/PrintSpooler/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/ActionBarShadow/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/ActionButtonsPreference/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/AdaptiveIcon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/AppPreference/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/BarChartPreference/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/DisplayDensityUtils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/EntityHeaderWidgets/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/HelpUtils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/LayoutPreference/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/RadioButtonPreference/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/RestrictedLockUtils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/SchedulesProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/SearchProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/SettingsSpinner/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/Tile/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/Utils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/search/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsLib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SettingsProvider/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SharedStorageBackup/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/Shell/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SimAppDialog/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SoundPicker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/StatementService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/plugin/ExamplePlugin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/plugin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/plugin_core/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/Tethering/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/VpnDialogs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/WAPPushManager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/WallpaperBackup/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/WallpaperCropper/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/services/PacProcessor/res" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/services/Proxy/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/animation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/checks/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/compose/core/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/compose/facade/disabled/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/compose/facade/enabled/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/compose/features/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/customization/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/monet/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/plugin/bcsmartspace/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/screenshot/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/shared/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/src-release" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/packages/SystemUI/unfold/src" isTestSource="false" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="services.core.unboosted" level="project" />
+    <orderEntry type="library" name="kotlinx-coroutines-core" level="project" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="library" name="WindowManager-Shell" level="project" />
+  </component>
+</module>

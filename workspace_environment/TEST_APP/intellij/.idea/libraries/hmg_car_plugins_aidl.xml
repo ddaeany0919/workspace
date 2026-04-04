@@ -1,0 +1,41 @@
+<component name="libraryTable">
+  <library name="hmg.car.plugins.aidl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/fingerprint/car-lib/hmg.car.plugin.fingerprint/android_common/turbine/hmg.car.plugin.fingerprint.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/am/car-lib/hmg.car.plugin.am/android_common/turbine-combined/hmg.car.plugin.am.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/audio/car-lib/hmg.car.plugin.audio/android_common/turbine-combined/hmg.car.plugin.audio.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/backlight/car-lib/hmg.car.plugin.backlight/android_common/turbine-combined/hmg.car.plugin.backlight.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/bluetoothexternal/car-lib/hmg.car.plugin.bluetoothexternal/android_common/turbine-combined/hmg.car.plugin.bluetoothexternal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/camera/car-lib/hmg.car.plugin.camera/android_common/turbine-combined/hmg.car.plugin.camera.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/carinfo/car-lib/hmg.car.plugin.carinfo/android_common/turbine-combined/hmg.car.plugin.carinfo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/ccsstatus/car-lib/hmg.car.plugin.ccsstatus/android_common/turbine-combined/hmg.car.plugin.ccsstatus.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/cloud/car-lib/hmg.car.plugin.cloud/android_common/turbine-combined/hmg.car.plugin.cloud.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/connectivity/car-lib/hmg.car.plugin.connectivity/android_common/turbine-combined/hmg.car.plugin.connectivity.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/csm/car-lib/hmg.car.plugin.csm/android_common/turbine-combined/hmg.car.plugin.csm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/digitalkey/car-lib/hmg.car.plugin.digitalkey/android_common/turbine-combined/hmg.car.plugin.digitalkey.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/factorymode/car-lib/hmg.car.plugin.factorymode/android_common/turbine-combined/hmg.car.plugin.factorymode.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/hostc/car-lib/hmg.car.plugin.hostc/android_common/turbine-combined/hmg.car.plugin.hostc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/input/car-lib/hmg.car.plugin.input/android_common/turbine-combined/hmg.car.plugin.input.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/location/car-lib/hmg.car.plugin.location/android_common/turbine-combined/hmg.car.plugin.location.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/monitorstate/car-lib/hmg.car.plugin.monitorstate/android_common/turbine-combined/hmg.car.plugin.monitorstate.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/naviadapter/car-lib/hmg.car.plugin.naviadapter/android_common/turbine-combined/hmg.car.plugin.naviadapter.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/power/car-lib/hmg.car.plugin.power/android_common/turbine-combined/hmg.car.plugin.power.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/ppcommunicator/car-lib/hmg.car.plugin.ppcommunicator/android_common/turbine-combined/hmg.car.plugin.ppcommunicator.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/session/car-lib/hmg.car.plugin.session/android_common/turbine-combined/hmg.car.plugin.session.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/soa/car-lib/hmg.car.plugin.soa/android_common/turbine-combined/hmg.car.plugin.soa.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/telephony/car-lib/hmg.car.plugin.telephony/android_common/turbine-combined/hmg.car.plugin.telephony.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/terminalmonitor/car-lib/hmg.car.plugin.terminalmonitor/android_common/turbine-combined/hmg.car.plugin.terminalmonitor.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/testautomation/car-lib/hmg.car.plugin.testautomation/android_common/turbine-combined/hmg.car.plugin.testautomation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/time/car-lib/hmg.car.plugin.time/android_common/turbine-combined/hmg.car.plugin.time.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/usage/car-lib/hmg.car.plugin.usage/android_common/turbine-combined/hmg.car.plugin.usage.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/userprofile/car-lib/hmg.car.plugin.userprofile/android_common/turbine-combined/hmg.car.plugin.userprofile.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/userprofilesync/car-lib/hmg.car.plugin.profiledatasync/android_common/turbine-combined/hmg.car.plugin.profiledatasync.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/uxrestriction/car-lib/hmg.car.plugin.uxrestriction/android_common/turbine-combined/hmg.car.plugin.uxrestriction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/variant/car-lib/hmg.car.plugin.variant/android_common/turbine-combined/hmg.car.plugin.variant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/vehiclestate/car-lib/hmg.car.plugin.vehiclestate/android_common/turbine-combined/hmg.car.plugin.vehiclestate.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/packages/services/Car/plugins/wifi/car-lib/hmg.car.plugin.wifi/android_common/turbine-combined/hmg.car.plugin.wifi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

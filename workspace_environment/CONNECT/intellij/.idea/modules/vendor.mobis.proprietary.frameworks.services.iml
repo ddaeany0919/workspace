@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/proprietary/frameworks/services/res" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks.core" />
+    <orderEntry type="module" module-name="vendor.mobis.frameworks" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="library" name="common.android.isp.interface-V1-java" level="project" />
+    <orderEntry type="library" name="mobis.framework" level="project" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="library" name="com.hmg.car" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/hardware/interfaces/fingerprint/aidl/vendor.mobis.fingerprint.hal-V1-java/android_common/turbine/vendor.mobis.fingerprint.hal-V1-java.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="frameworks.base.media" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+  </component>
+</module>

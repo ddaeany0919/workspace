@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="external_caliper">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../external/caliper/caliper/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

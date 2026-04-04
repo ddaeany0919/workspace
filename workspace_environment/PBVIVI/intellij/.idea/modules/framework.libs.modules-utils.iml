@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/libs/modules-utils">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/libs/modules-utils/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/libs/modules-utils/javatests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/libs/modules-utils/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/libs/modules-utils/tools" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../tools/platform-compat">
+      <sourceFolder url="file://$MODULE_DIR$/../../../tools/platform-compat/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../tools/platform-compat/javatest" isTestSource="true" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+  </component>
+</module>

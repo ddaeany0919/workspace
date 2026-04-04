@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android.hardware.automotive.vehicle-V2.0-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/hardware/interfaces/automotive/vehicle/2.0/android.hardware.automotive.vehicle-V2.0-java/android_common/turbine-combined/android.hardware.automotive.vehicle-V2.0-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

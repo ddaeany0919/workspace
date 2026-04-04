@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="packages.apps.Car.SystemUI" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="library" name="external.jsr330" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/8.4/generated-gradle-jars/gradle-api-8.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

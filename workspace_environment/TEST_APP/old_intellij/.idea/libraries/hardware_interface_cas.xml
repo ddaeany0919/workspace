@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="hardware.interface.cas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/cas/1.0/android.hardware.cas-V1.0-java/android_common/javac/android.hardware.cas-V1.0-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/cas/1.1/android.hardware.cas-V1.1-java/android_common/javac/android.hardware.cas-V1.1-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../out/soong/.intermediates/hardware/interfaces/cas/1.2/android.hardware.cas-V1.2-java/android_common/javac/android.hardware.cas-V1.2-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

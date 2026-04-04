@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mobis.framework.core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/mobis/proprietary/frameworks/mobis.framework.core/android_common/turbine-combined/mobis.framework.core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

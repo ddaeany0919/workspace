@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="android_compat">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/libcore/core-all/android_common/javac/core-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/libcore/core-all/android_common/res/core-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/prebuilts/sdk/current/androidx/androidx.appcompat_appcompat/android_common/turbine-combined/androidx.appcompat_appcompat.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

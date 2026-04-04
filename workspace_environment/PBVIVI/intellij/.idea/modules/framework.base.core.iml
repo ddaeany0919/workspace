@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/base/core">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/res/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/res/remote_color_resources_res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/res/res" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/api" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../frameworks/base/core/xsd" />
+    </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+  </component>
+</module>

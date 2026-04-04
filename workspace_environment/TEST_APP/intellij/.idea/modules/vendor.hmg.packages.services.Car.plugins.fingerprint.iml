@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/fingerprint">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/fingerprint/car-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/fingerprint/service/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/plugins/fingerprint/service/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="library" name="hmg.car.plugins.aidl" level="project" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="module" module-name="vendor.hmg.packages.services.Car.property.car-lib" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="module" module-name="vendor.hmg.packages.services.Car.car-base" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/hardware/interfaces/fingerprint/aidl/vendor.mobis.fingerprint.hal-V1-java/android_common/turbine/vendor.mobis.fingerprint.hal-V1-java.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="mobis.framework" level="project" />
+    <orderEntry type="library" name="hmg-car-frameworks-service" level="project" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks.core" />
+  </component>
+</module>

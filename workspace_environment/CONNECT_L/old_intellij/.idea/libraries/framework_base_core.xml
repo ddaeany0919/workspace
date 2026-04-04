@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="framework.base.core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/frameworks/base/core/java" />
+    </SOURCES>
+  </library>
+</component>

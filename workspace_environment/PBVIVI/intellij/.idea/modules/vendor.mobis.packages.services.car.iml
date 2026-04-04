@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/PBV_CarUiPortraitSystemUI/android_common/gen/aapt2/R">
+      <sourceFolder url="file://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/PBV_CarUiPortraitSystemUI/android_common/gen/aapt2/R" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/car_product/car_ui_portrait/apps/CarUiPortraitSystemUI/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/packages/AlertService/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/packages/AlertService/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/car_product/car_ui_portrait/rro" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../vendor/mobis/packages/services/Car/data" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="framework.base.libs" />
+    <orderEntry type="module" module-name="framework.base.core" />
+    <orderEntry type="module" module-name="framework.base.packages" />
+    <orderEntry type="module" module-name="framework.base.graphic" />
+    <orderEntry type="module" module-name="framework.base.media" />
+    <orderEntry type="module" module-name="framework.base.services" />
+    <orderEntry type="module" module-name="framework.layoutlib" />
+    <orderEntry type="module" module-name="framework.libs.modules-utils" />
+    <orderEntry type="module" module-name="framework.opt" />
+    <orderEntry type="module" module-name="packages.services" />
+    <orderEntry type="module" module-name="vendor.mobis.packages.apps.Car.SystemUI" />
+    <orderEntry type="module" module-name="vendor.mobis.proprietary.frameworks" />
+    <orderEntry type="module" module-name="vendor.mobis.packages.apps.Car.Apps" />
+    <orderEntry type="library" name="androidx" level="project" />
+    <orderEntry type="library" name="services.core.unboosted" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/services/GlobalSearchService/GlobalSearchInterfaceHmi-lib/android_common/javac/GlobalSearchInterfaceHmi-lib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../out/soong/.intermediates/vendor/mobis/packages/apps/Car/SystemUI/PBV_CarSystemUI-core/android_common/turbine/PBV_CarSystemUI-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/android.car.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/gson-2.10.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/RearCareModeRemote.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/mobis.framework.core.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/libphonenumber-8.13.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../vendor/mobis/packages/apps/Car/ControlCenter/app/libs/mobis.bluetoothexternal.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

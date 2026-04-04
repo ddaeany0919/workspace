@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen">
+      <sourceFolder url="file://$MODULE_DIR$/../../../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen/aapt2/R" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen/aidl/packages/services/Car/procfs-inspector/client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen/aidl/packages/services/Car/service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../out/soong/.intermediates/packages/services/Car/service/CarServiceUpdatableNonModule/android_common/gen/proto/packages/services/Car/car-lib/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../packages/services/Car/service">
+      <sourceFolder url="file://$MODULE_DIR$/../../../packages/services/Car/service/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+    <orderEntry type="module" module-name="frameworks.base.graphic" />
+    <orderEntry type="module" module-name="frameworks.base.libs" />
+    <orderEntry type="module" module-name="frameworks.base.media" />
+    <orderEntry type="module" module-name="frameworks.base.opengl" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="module" module-name="frameworks.base.services" />
+    <orderEntry type="module" module-name="frameworks.layoutlib" />
+    <orderEntry type="module" module-name="frameworks.libs.modules-utils" />
+    <orderEntry type="module" module-name="frameworks.opt" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="module" module-name="packages.services.Car.car-builtin-lib" />
+    <orderEntry type="module" module-name="packages.services.Car.apex_car_framework" />
+    <orderEntry type="module" module-name="packages.services.Car.car-evs-helper-lib" />
+    <orderEntry type="module" module-name="packages.services.Car.car-helper-lib" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib-module" />
+    <orderEntry type="library" name="android.car" level="project" />
+    <orderEntry type="library" name="android.hardware.automotive.vehicle-V2.0-java" level="project" />
+  </component>
+</module>

@@ -1,0 +1,34 @@
+# default setting
+export WORKSPACE_PROJECT_TYPE="AAOS"
+export WORKSPACE_REMOTE_HOME="/mnt/w/${WORKSPACE_PROJECT}"
+
+export BUILD_HOME="~/${WORKSPACE_PROJECT}"
+export ANDROID_OUTPUT="${WORKSPACE_REMOTE_HOME}_out"
+export ANDROID_PRODUCT_OUT="${WORKSPACE_REMOTE_HOME}_out"
+
+export WORKSPACE_BUILD_SERVER="svr"
+
+if [ ! -z "$SSH_CLIENT" ]; then
+    
+    # for mobis
+    cd ${WORKSPACE_HOME}/apps/LINUX/qssi/
+    source build/envsetup.sh
+    lunch qssi_au-userdebug
+
+    export JAVA_HOME=~/PBVIVI/release/gradle/JDK/jbr/
+    export PATH=${JAVA_HOME}/bin:$PATH
+    export ANDROID_HOME=~/PBVIVI/release/gradle/SDK/
+
+    # ignore tests while on build
+    export BUILD_BROKEN_TESTS=true
+    export BUILD_BROKEN_INSTRUMENTATION_TESTS=true
+
+
+else
+    export WORKSPACE_PRODUCT_ALIAS="connect-l"
+fi
+
+complete -W "$(${WORKSPACE_HOME}/.workspace_env/bin/xbuild_module.sh -l)" xbuild_module.sh
+
+alias dmb_on="am broadcast -a oem.custom.action.media_onoff -p com.mobis.app.dmb --ei CURRENT_TYPE -1 -e MEDIA_TYPE dmb"
+alias dmb_off="am broadcast -a oem.custom.action.media_onoff -p com.mobis.app.dmb  --ei CURRENT_TYPE 10 -e MEDIA_TYPE dmb"

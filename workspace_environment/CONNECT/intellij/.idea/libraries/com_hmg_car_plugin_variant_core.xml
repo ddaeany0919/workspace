@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.hmg.car.plugin.variant-core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/hardware/interfaces/hmgvariantd/aidl/vendor.hmg.hardware.interfaces.hmgvariantd-V1-java/android_common/turbine/vendor.hmg.hardware.interfaces.hmgvariantd-V1-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../out/soong/.intermediates/vendor/hmg/hardware/interfaces/hmgvariantd/aidl/vendor.hmg.hardware.interfaces.hmgvariantd-V1-java-source/gen" />
+    </SOURCES>
+  </library>
+</component>

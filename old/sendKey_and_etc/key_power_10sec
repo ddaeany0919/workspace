@@ -1,0 +1,5 @@
+loop 100000
+interval 10
+KEY_POWER
+sleep 10
+KEY_POWER

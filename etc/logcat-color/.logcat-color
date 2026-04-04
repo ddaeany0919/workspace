@@ -1,0 +1,15 @@
+tag_width = 30
+pid_width = 5
+tid_width = 5
+Profile(
+    name = "default",
+    tags = {
+        "AndroidRuntime": Back.RED + Fore.BLACK,
+        "DEBUG": Fore.YELLOW + Style.BRIGHT,
+        "ActivityManager": Back.YELLOW + Fore.BLACK,
+        "ActivityTaskManager": Back.YELLOW + Fore.BLACK,
+        "WindowManager": Back.YELLOW + Fore.BLACK,
+        "wm_*": Back.WHITE + Fore.BLUE + Style.DIM,
+        "OemActivityManagerService": Back.BLUE + Fore.YELLOW + Style.BRIGHT,
+    },
+)

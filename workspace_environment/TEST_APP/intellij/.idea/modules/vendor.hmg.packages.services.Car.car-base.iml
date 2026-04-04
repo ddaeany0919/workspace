@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/car-base">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/car-base/car-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/hmg/packages/services/Car/car-base/service/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="vendor.hmg.packages.services.Car.car-lib" />
+    <orderEntry type="library" name="com.hmg.car" level="project" />
+  </component>
+</module>

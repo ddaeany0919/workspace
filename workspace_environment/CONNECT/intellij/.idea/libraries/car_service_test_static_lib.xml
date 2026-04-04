@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="car-service-test-static-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/packages/services/Car/service/car-service-test-static-lib/android_common/turbine-combined/car-service-test-static-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

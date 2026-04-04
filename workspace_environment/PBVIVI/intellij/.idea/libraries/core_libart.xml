@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="core-libart">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../out/soong/.intermediates/libcore/core-libart/android_common_apex31/turbine/core-libart.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../../vendor/42dot/packages/apps/Car/SystemUI">
+      <sourceFolder url="file://$MODULE_DIR$/../../../vendor/42dot/packages/apps/Car/SystemUI/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="packages.services.Car.car-lib" />
+    <orderEntry type="module" module-name="frameworks.base.packages" />
+    <orderEntry type="module" module-name="frameworks.base.core" />
+  </component>
+</module>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/frameworks/layoutlib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/frameworks/libs/modules-utils" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/BluetoothEng" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/BluetoothEng/app/build/translations/configuration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/vendor.mobis.packages.apps.DMB" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/vendor.mobis.packages.apps.DMB/common/ui/build/translations/configuration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/vendor.mobis.packages.apps.DMB/common/ui/build/translations/cstd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/libcore/vendor.mobis.packages.apps.DMB/common/ui/build/translations/pbvivi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Car/LatinIME" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Car/MediaPrebuilt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Car/Provision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Car/SystemUpdater" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Car/systemlibs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/CertInstaller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/KeyChain" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/ManagedProvisioning" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/PhoneCommon" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Provision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/SecureElement" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Settings" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/Stk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/StorageManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/apps/WallpaperPicker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/packages/services/Car" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/vendor/mobis/packages/apps/Car/SystemUI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/vendor/mobis/packages/apps/DMB" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/vendor/mobis/packages/apps/Settings" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../1.Sources/apps/LINUX/qssi/vendor/mobis/proprietary/frameworks" vcs="Git" />
+  </component>
+</project>

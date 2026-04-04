@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../frameworks/layoutlib">
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/bridge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/common/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/create/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/remote/client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/remote/common/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/remote/server/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/remote/tests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/studio-custom-widgets/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../frameworks/layoutlib/validator/src" isTestSource="false" />
+    </content>
+    <orderEntry type="library" name="android_compat" level="project" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prebuilts.sdk.androidxx" level="project" />
+    <orderEntry type="library" name="framework-minus-apex" level="project" />
+  </component>
+</module>
