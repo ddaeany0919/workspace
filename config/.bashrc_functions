@@ -1,0 +1,143 @@
+############### COMMON ###############
+
+DEBUG=false
+
+function reload() {
+    source "${WORKSPACE_ROOT}/config/bashrc_main.sh"
+}
+
+function mkdir_cd () { 
+    if [[ -z "$1" ]]; then
+        log -w "mkdir_cd: no directory name provided"
+        return 1
+    fi
+    [[ -d "$1" ]] && { log -w "directory already exists"; cd "$1"; return 0; }
+    do_execute -i "mkdir -p \"$1\"" && cd "$1"
+}
+
+# zipf: To create a ZIP archive of a folder
+function zipf () { zip -r "$1.zip" "$1" ; }
+
+# extract: Extract most known archives with one command
+function extract () {
+    local directory="${1%.*}"
+    [[ -d "${directory}" ]] || mkdir -p "${directory}"
+
+    if [[ -f "$1" ]] ; then
+        case "$1" in
+            *.tar.bz2|*.tbz2) tar xjf "$1" --directory "${directory}" ;;
+            *.tar.gz|*.tgz)   tar xzf "$1" --directory "${directory}" ;;
+            *.bz2)            bunzip2 "$1" ;;
+            *.rar)            unrar e "$1" ;;
+            *.gz)             gunzip "$1" ;;
+            *.tar)            tar xf "$1" --directory "${directory}" ;;
+            *.zip)            unzip "$1" -d "${directory}" ;;
+            *.Z)              uncompress "$1" ;;
+            *.7z)             7z x "$1" ;;
+            *)                log -w "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        log -w "'$1' is not a valid file"
+    fi
+}
+
+# ==========================================
+# 초고속 네이티브 Grep 유틸리티 (find -exec 대체)
+# ==========================================
+function ggrep()   { grep -rn --color=always --include="*.gradle" --exclude-dir={.repo,.git,out} "$@" . ; }
+function jgrep()   { grep -rn --color=always --include="*.java" --exclude-dir={.repo,.git,out} "$@" . ; }
+function kgrep()   { grep -rn --color=always --include="*.{kt,kts}" --exclude-dir={.repo,.git,out} "$@" . ; }
+function pygrep()  { grep -rn --color=always --include="*.py" --exclude-dir={.repo,.git,out,venv,__pycache__} "$@" . ; }
+function cgrep()   { grep -rn --color=always --include="*.{c,cc,cpp,h,hpp}" --exclude-dir={.repo,.git,out} "$@" . ; }
+function resgrep() { grep -rn --color=always --include="*.xml" --exclude-dir={.repo,.git,out} "$@" . ; }
+function mangrep() { grep -rn --color=always --include="AndroidManifest.xml" --exclude-dir={.repo,.git,out} "$@" . ; }
+function sepgrep() { grep -rn --color=always --exclude-dir={.repo,.git,out} "$@" ./sepolicy 2>/dev/null ; }
+function rcgrep()  { grep -rn --color=always --include="*.rc*" --exclude-dir={.repo,.git,out} "$@" . ; }
+function mgrep()   { grep -rn --color=always --include="*.{mk,mak,make,bp,go}" --include="Makefile*" --exclude-dir={.repo,.git,out} "$@" . ; }
+function treegrep(){ grep -rni --color=always --include="*.{c,h,cpp,hpp,S,java,xml}" --exclude-dir={.repo,.git,out} "$@" . ; }
+
+# Expr 연산 제거 및 안전한 타임스탬프
+function timestamp() {
+    local ts="${1:-$(date +%s%3N)}"
+    local result
+    result=$(date +%D\ %T -d @"${ts:0:10}" 2>/dev/null | cut -d '+' -f 1)
+    log -i "date=${result}.${ts:10} ($ts)"
+}
+
+function __remove_from_path() {
+    local DIR="$1"
+    local NEWPATH=""
+    for p in ${PATH//:/ }; do
+        [[ "$p" != "$DIR" ]] && NEWPATH="${NEWPATH:+$NEWPATH:}$p"
+    done
+    PATH="$NEWPATH"
+}
+
+function set_tabtitle () {
+    local title="${1:-${USER}}"
+    [[ -n "${WORKSPACE_ENV_TERMINAL_TITLE}" ]] && title="${WORKSPACE_ENV_TERMINAL_TITLE}"
+
+    if [[ -z "$SSH_CLIENT" ]]; then
+        echo -ne "\033]0;${title}\a"
+    else
+        local localHostname="${WORKSPACE_ENV_HOSTNAME:-$HOSTNAME}"
+        echo -ne "\033]0;<${localHostname}> ${title} \a"
+    fi
+}
+
+############### WORKSPACE ###############
+function workspace {
+    local param="${*: -1}"
+    
+    if [[ $# -eq 0 ]]; then
+        if [[ -z "${WORKSPACE_PROJECT}" ]]; then
+            log -w "must need a project name!"
+        elif [[ ! -f "${WORKSPACE_HOME}/workspace" ]]; then
+            log -w "not found ${WORKSPACE_HOME}/workspace"
+        else
+            "${WORKSPACE_HOME}/workspace"
+        fi
+    else
+        if [[ "-l" == "${param}" ]]; then
+            ls -c "$WORKSPACE_ROOT/1.Projects/"
+        else
+            local project_path="$WORKSPACE_ROOT/1.Projects/${param}"
+            local project_link="${HOME}/${param}"
+            
+            log -i "Environment of workspace set to \"${param}\""
+
+            if [[ ! -d "${project_path}" ]]; then
+                log -i "Creating workspace for ${param} at ${project_path}"
+                mkdir -p "${project_path}"
+            fi
+
+            [[ -L "${project_link}" ]] || ln -s "${project_path}" "${project_link}"
+            
+            # Clean previous env
+            if [[ -n "${WORKSPACE_HOME}" ]]; then
+                for p in ${WORKSPACE_ENV_PATH//:/ }; do
+                    __remove_from_path "$p"
+                done
+                for var in $(env | grep WORKSPACE_ | cut -d= -f1); do
+                    unset "$var"
+                done
+            fi
+
+            export WORKSPACE_PROJECT="${param}"
+            export WORKSPACE_HOME="${project_path}"
+            export WORKSPACE_PRODUCT_NAME="${WORKSPACE_PROJECT,,}"
+
+            # Load project config
+            local env_config="${WORKSPACE_HOME}/.workspace_env/environments"
+            [[ -x "${env_config}" ]] && source "${env_config}"
+
+            # Update PS1 & Title
+            source "$WORKSPACE_ROOT/core/ps1.sh"
+            set_tabtitle "${WORKSPACE_PROJECT}"
+            cd "${project_path}" || return 1
+        fi
+    fi
+}
+
+# Completion for workspace
+[[ -d "$WORKSPACE_ROOT/1.Projects" ]] && complete -W "$(ls -c "$WORKSPACE_ROOT/1.Projects/")" workspace

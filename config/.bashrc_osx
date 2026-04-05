@@ -1,0 +1,145 @@
+# For JAVA_HOME
+export JAVA_HOME="$(/usr/libexec/java_home 2>/dev/null)"
+
+# For Android tools
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+export ANDROID_TOOLS="${ANDROID_HOME}/tools"
+export ANDROID_TOOLS_BIN="${ANDROID_TOOLS}/bin"
+export ANDROID_PLATFORM_TOOLS="${ANDROID_HOME}/platform-tools"
+export PATH="${PATH}:${ANDROID_TOOLS}:${ANDROID_TOOLS_BIN}:${ANDROID_PLATFORM_TOOLS}:/usr/local/opt/gettext/bin:/opt/homebrew/bin"
+
+if [[ -f "${WORKSPACE_ROOT}/bin/git-completion.bash" ]]; then
+  source "${WORKSPACE_ROOT}/bin/git-completion.bash"
+fi
+
+# To build for AOSP
+mountAndroid() { 
+    if [[ ! -d /Volumes/Slave ]]; then
+        echo "Not mounted /Volumes/Slave"
+    elif [[ ! -e /Volumes/Slave/android.dmg.sparseimage ]]; then
+        echo "Not found file that android.dmg.sparseimage in /Volumes/Slave"
+    else
+        hdiutil attach /Volumes/Slave/android.dmg.sparseimage -mountpoint /Volumes/Android
+    fi
+}
+
+umountAndroid() {
+    if [[ ! -d /Volumes/Android ]]; then
+        echo "Not found unmountable volume [/Volumes/Android]"
+    else
+        hdiutil detach /Volumes/Android
+    fi
+}
+
+# set the number of open files to be 1024
+ulimit -S -n 1024
+
+# Compiler cache
+export USE_CCACHE=1
+
+# Load the bash completion files
+if [[ -x "$(command -v brew)" ]]; then
+    local BREW_PREFIX
+    BREW_PREFIX="$(brew --prefix)"
+    if [[ -f "${BREW_PREFIX}/etc/bash_completion" ]]; then
+        source "${BREW_PREFIX}/etc/bash_completion"
+    fi
+fi
+
+# -----------------------------
+# 1. ALIAS
+# -----------------------------
+alias edit='code'
+alias finder='open -a Finder ./'
+alias ~="cd ~"
+alias which='type -all'
+alias path='echo -e "${PATH//:/\\n}"'
+alias show_options='shopt'
+alias fix_stty='stty sane'
+alias cic='set completion-ignore-case On'
+
+trash () { command mv "$@" ~/.Trash ; }
+ql () { qlmanage -p "$*" >& /dev/null; }
+alias DT='tee ~/Desktop/terminalOut.txt'
+
+mans () {
+    man "$1" | grep -iC2 --color=always "$2" | less
+}
+
+showa () { grep --color=always -i -a1 "$@" ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
+
+# -------------------------------
+# 2. FILE AND FOLDER MANAGEMENT
+# -------------------------------
+cdf () {
+    local currFolderPath
+    currFolderPath=$( /usr/bin/osascript <<EOT
+        tell application "Finder"
+            try
+                set currFolder to (folder of the front window as alias)
+            on error
+                set currFolder to (path to desktop folder as alias)
+            end try
+            POSIX path of currFolder
+        end tell
+EOT
+    )
+    echo "cd to \"$currFolderPath\""
+    cd "$currFolderPath" || return 1
+}
+
+# ---------------------------
+# 3. SEARCHING
+# ---------------------------
+alias qfind="find . -name "
+ff () { find . -name "$@" ; }
+
+spotlight () { mdfind "kMDItemDisplayName == '$*'wc"; }
+
+# ---------------------------
+# 4. PROCESS MANAGEMENT
+# ---------------------------
+findPid () { lsof -t -c "$@" ; }
+
+alias memHogsTop='top -l 1 -o rsize | head -20'
+alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+alias topForever='top -l 9999999 -s 10 -o cpu'
+alias ttop="top -R -F -s 10 -o rsize"
+
+my_ps() { ps "$@" -u "$USER" -o pid,%cpu,%mem,start,time,bsdtime,command ; }
+
+# ---------------------------
+# 5. NETWORKING
+# ---------------------------
+alias myip='curl ip.appspot.com'
+alias netCons='lsof -i'
+alias flushDNS='dscacheutil -flushcache'
+alias lsock='sudo lsof -i -P'
+alias lsockU='sudo lsof -nP | grep UDP'
+alias lsockT='sudo lsof -nP | grep TCP'
+alias ipInfo0='ipconfig getpacket en0'
+alias ipInfo1='ipconfig getpacket en1'
+alias openPorts='sudo lsof -i | grep LISTEN'
+alias showBlocked='sudo ipfw list'
+
+ii() {
+    echo -e "\nYou are logged on ${COLOR_RED}${HOST}${COLOR_END}"
+    echo -e "\nAdditional information: " ; uname -a
+    echo -e "\n${COLOR_RED}Users logged on:${COLOR_END} " ; w -h
+    echo -e "\n${COLOR_RED}Current date :${COLOR_END} " ; date
+    echo -e "\n${COLOR_RED}Machine stats :${COLOR_END} " ; uptime
+    echo -e "\n${COLOR_RED}Current network location :${COLOR_END} " ; scselect
+    echo -e "\n${COLOR_RED}Public facing IP Address :${COLOR_END} " ; myip
+    echo
+}
+
+# ---------------------------------------
+# 6. SYSTEMS OPERATIONS & INFORMATION
+# ---------------------------------------
+alias mountReadWrite='/sbin/mount -uw /'
+alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
+alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
+alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
+alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'

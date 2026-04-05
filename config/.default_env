@@ -1,0 +1,31 @@
+# Workspace Global Configuration
+
+# 🌐 AI / Review Server Settings
+export AI_SERVER="192.168.0.12"
+export AI_PORT="8000"
+export AI_REVIEW_URL="http://${AI_SERVER}:${AI_PORT}/review"
+export AI_ANALYZE_URL="http://${AI_SERVER}:${AI_PORT}/analyze"
+
+# 🏗️ Build Server Settings
+export BUILD_SERVER="192.168.0.12"
+
+# 🛡️ VPN Settings
+export VPN_INTERFACE="enp3s0"
+export VPN_PORT="443"
+
+# 📱 Android / ADB Settings
+export DEFAULT_ADB_PORT="5555"
+
+# 📂 Path Settings (Auto-detecting OS)
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
+    export WORKSPACE_OS="windows"
+    export TEMP_DIR="C:/Users/kth00/.gemini/tmp"
+    export PING_OPTS="-n 1 -w 1000"
+else
+    export WORKSPACE_OS="linux"
+    export TEMP_DIR="${HOME}/.tmp"
+    export PING_OPTS="-c 1 -W 1"
+fi
+
+# 🤖 AI Assistant Settings
+export AI_CONTEXT_FILE="${TEMP_DIR}/ai_context.json"

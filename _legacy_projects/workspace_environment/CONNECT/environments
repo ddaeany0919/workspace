@@ -1,0 +1,63 @@
+# Workspace Project Environment: CONNECT / CONNECT_L
+export WORKSPACE_PROJECT_TYPE="AAOS"
+export BUILD_HOME="${HOME}/${WORKSPACE_PROJECT}"
+
+# 멈춤 버그(fidl-gen-connect-qnx) 원천 차단
+unset DISPLAY
+
+# 제품명 설정 최적화
+if [[ "${WORKSPACE_PROJECT}" == "CONNECT_L" ]]; then
+    export WORKSPACE_PRODUCT_NAME="connect_l"
+else
+    export WORKSPACE_PRODUCT_NAME="connect_s"
+fi
+
+export WORKSPACE_BUILD_VARIANT="userdebug"
+# 전역 설정 파일의 빌드 서버 활용 (없을 시 기본값 svr)
+export WORKSPACE_BUILD_SERVER="${BUILD_SERVER:-svr}"
+
+if [[ -d "${WORKSPACE_HOME}/lagvm/LINUX/android" ]]; then
+    export WORKSPACE_ANDROID_HOME="${WORKSPACE_HOME}/lagvm/LINUX/android"
+    export JAVA_HOME="${WORKSPACE_HOME}/release/gradle/JDK/jbr/"
+    export ANDROID_HOME="${WORKSPACE_HOME}/release/gradle/SDK/"
+    export PATH="${JAVA_HOME}/bin:${HOME}/localperl/bin:$PATH"
+    export LAGVM_PRODUCT_NAME="${WORKSPACE_PRODUCT_NAME}:${LC_WS_PROD_NAME}"
+    export LAGVM_BUILD_VARIANT="${WORKSPACE_BUILD_VARIANT}"
+
+    export SKIP_ABI_CHECKS=true
+    export BUILD_BROKEN_TESTS=true
+    export BUILD_BROKEN_INSTRUMENTATION_TESTS=true
+
+    alias go_android="cd ${WORKSPACE_ANDROID_HOME}"
+    alias envsetup="cd ${WORKSPACE_ANDROID_HOME} && source build/envsetup.sh"
+
+    function build_env {
+        cd "${WORKSPACE_ANDROID_HOME}" || return
+        source build/envsetup.sh
+        lunch "${LAGVM_PRODUCT_NAME}-${LAGVM_BUILD_VARIANT}"
+    }
+else
+    export WORKSPACE_PRODUCT_ALIAS="connect"
+    export LC_WS_PROD_NAME="${WORKSPACE_PRODUCT_NAME}"
+    export WORKSPACE_ADB_PERMISSIVE=false
+
+    # 시리얼 번호 설정
+    if [[ "${WORKSPACE_PRODUCT_NAME}" == "connect_l" ]] ; then
+        export ANDROID_SERIAL="cfd42ac7"
+    else
+        export ANDROID_SERIAL="db1aec47"
+    fi
+
+    export ANDROID_OUTPUT="/mnt/w/${WORKSPACE_PROJECT}/lagvm/LINUX/android/out/target/product/${WORKSPACE_PRODUCT_NAME}"
+    export ANDROID_PRODUCT_OUT="${ANDROID_OUTPUT}"
+    export WORKSPACE_REMOTE_HOME="/mnt/w/${WORKSPACE_PROJECT}"
+
+    # 자동 완성 설정 (Quoted)
+    [[ -f "${WORKSPACE_HOME}/.workspace_env/bin/car_prop.sh" ]] && complete -W "$("${WORKSPACE_HOME}/.workspace_env/bin/car_prop.sh" -l)" car_prop.sh
+    [[ -f "${WORKSPACE_HOME}/.workspace_env/bin/xbuild_module.sh" ]] && complete -W "$("${WORKSPACE_HOME}/.workspace_env/bin/xbuild_module.sh" -l)" xbuild_module.sh
+    [[ -f "${WORKSPACE_HOME}/.workspace_env/bin/fpm.sh" ]] && complete -W "$("${WORKSPACE_HOME}/.workspace_env/bin/fpm.sh" -l)" fpm.sh
+
+    # 공통 함수 사용 (common_bash.sh에 정의된 함수 호출)
+    alias adb_monitoring="adb_device_full_monitoring"
+    alias IGNITION_ON="adb shell dumpsys android.hardware.automotive.vehicle.IVehicle/default --set 557891584 -i 1"
+fi

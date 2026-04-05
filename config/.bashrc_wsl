@@ -1,0 +1,108 @@
+export JAVA_HOME="${JAVA_HOME:-/usr/lib/jvm/java-17-openjdk-amd64}"
+
+# edit: Opens any file in code
+alias edit='code'
+
+# replace adb execution binary
+function docker_exec_workspace() {
+    local opt=""
+    [[ -n "$1" ]] && opt="-w $(realpath "$1")"
+    docker exec -it ${opt} workspace bash
+}
+
+function mount_drvfs() {
+    if [[ -z "$1" ]]; then
+        log -w "must need drive path"
+        return 1
+    elif [[ ! -d "/mnt/$1" ]]; then
+        sudo mkdir -p "/mnt/$1"
+    fi
+
+    # Check if the drive is already mounted
+    if mountpoint -q "/mnt/$1"; then
+        log -i "Drive is already mounted at /mnt/$1"
+    else
+        log -i "Mounting $1 to /mnt/$1"
+        do_execute -i sudo mount -t drvfs -o metadata,umask=22,fmask=11,uid="$(id -u)",gid="$(id -g)" "$1:" "/mnt/$1" 
+        if mountpoint -q "/mnt/$1"; then
+            log -i "Mount successful: /mnt/$1"
+        else
+            log -e "Mount failed: /mnt/$1"
+            return 1
+        fi
+    fi  
+        
+    log -i "Let's go to /mnt/$1"
+    cd "/mnt/$1" || return 1
+}
+
+function cmd_copy {
+    log -d "cmd_copy $*"
+    [[ -z "$1" || -z "$2" ]] && { log -w "need target name and dest path!"; return 1; }
+    
+    local file
+    file=$(realpath "$1")
+    log -d "file=${file}"
+    
+    if [[ ! -x "${file}" && ! -f "${file}" ]]; then
+        log -e "file not found : $1"
+        return 1
+    fi
+
+    # Convert WSL path to Windows path (Simple approach)
+    local win_target
+    win_target=$(wslpath -w "$file")
+    echo "win_target=${win_target}"
+
+    log -d "target=${win_target} $2"
+    cmd.exe /C "copy \"${win_target}\" \"$2\""
+    explorer.exe "$2"
+
+    [[ -n "${WORKSPACE_PROJECT}" ]] && set_tabtitle "${WORKSPACE_PROJECT}"
+}
+
+function cmd_mv() {
+    if cmd_copy "$@"; then
+        log -i "success"
+    else
+        log -w "failed"
+    fi
+}
+
+function explorer() {
+    local USABLE_EXPLORER_TAB=false
+    if [[ -n "$WSL_DISTRO_NAME" ]]; then
+        if grep -q "wsl2" /proc/version 2>/dev/null; then
+            USABLE_EXPLORER_TAB=true
+        fi
+    fi
+
+    if [[ -z "$1" ]]; then
+        local curr_path
+        curr_path=$(wslpath -w "$(pwd)")
+        log -i "explorer.exe $curr_path"
+        explorer.exe "$curr_path"
+    else
+        local arguments=()
+        for target in "$@"; do
+            if [[ -e "$target" ]]; then
+                local win_target
+                win_target=$(wslpath -w "$target")
+                if $USABLE_EXPLORER_TAB; then
+                    arguments+=("$win_target")
+                else
+                    log -i "explorer.exe ${win_target}"
+                    explorer.exe "${win_target}"
+                fi
+            else
+                log -w "File or directory not found: $target"
+            fi
+        done
+        
+        if (( ${#arguments[@]} > 0 )); then
+            log -i "explorer.exe ${arguments[*]}"
+            explorer.exe "${arguments[@]}"
+        fi
+    fi
+    return 0
+}

@@ -1,2 +1,4 @@
 /.TARGET_IP
 .repo/
+node_modules/
+.idea/

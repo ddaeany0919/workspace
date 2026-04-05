@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source common_menu.sh;
+source common_bash.sh
 DEBUG_COMMON_BASH=false;
 DEBUG=true;
 

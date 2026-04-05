@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+source common_bash.sh
+
+DEBUG=false
+# to open the log on at this envionment
+function log_view {
+    local ip_addr="${ANDROID_SERIAL%%:*}"
+    IFS='.' read -r -a ip_addr_array <<< "$ip_addr"
+    local length=${#ip_addr_array[@]}
+    local last_index=$((length - 1))
+    local last_ip="${ip_addr_array[last_index]}"
+
+    local product_name="${WORKSPACE_PROJECT,,}"
+    if [[ -n "${WORKSPACE_PRODUCT_ALIAS}" ]]; then
+        product_name="${WORKSPACE_PRODUCT_ALIAS,,}"
+    fi
+
+    local DATE
+    printf -v DATE '%(%y%m%d)T' -1
+    local log_directory="${HOME}/temp"
+    log -d "log_directory=${log_directory}"
+    log -d "${DATE}_*${last_ip}"
+
+    # Use find or shell globbing instead of ls | head
+    local log_files=("${log_directory}/${DATE}_${product_name}"_*"${last_ip}"*.logcat)
+    if [[ -e "${log_files[0]}" ]]; then
+        # Sort by modification time to get the latest
+        log_file=$(ls -t "${log_files[@]}" | head -n1)
+    else
+        log_file=""
+    fi
+
+    log -d "log_file=${log_file}"
+    local filter=""
+
+    if [[ ! -d "${log_directory}" ]]; then
+        log -e "${log_directory} is not exist!"
+        return 1
+    elif [[ -f "${log_file}" ]]; then
+        log -d "args = $#"
+        if [[ $# -ge 1 ]]; then
+            for ARG in "$@"; do
+                log -d "filter=${filter}"
+                if [[ -n "${filter}" ]]; then
+                    filter+="|"
+                fi
+                filter+="${ARG}"
+            done
+        fi
+
+        if [[ -n "${filter}" ]]; then
+            log -i "tail -f ${log_file} | egrep --color=always \"${filter}\""
+            tail -f "${log_file}" | egrep --color=always "${filter}"
+        else
+            log -i "tail -f ${log_file}"
+            tail -f "${log_file}"
+        fi
+    else
+        log -e "log file is not exist!"
+    fi
+}
+log_view $@

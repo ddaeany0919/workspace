@@ -1,0 +1,24 @@
+# Workspace Project Environment: TEST_APP
+export WORKSPACE_PROJECT_TYPE="AAOS"
+export BUILD_HOME="${HOME}/${WORKSPACE_PROJECT}"
+
+# 제품명 설정
+export WORKSPACE_PRODUCT_NAME="test_app"
+export WORKSPACE_BUILD_VARIANT="userdebug"
+export WORKSPACE_BUILD_SERVER="${BUILD_SERVER:-svr}"
+
+if [[ -d "${WORKSPACE_HOME}/lagvm/LINUX/android" ]]; then
+    export WORKSPACE_ANDROID_HOME="${WORKSPACE_HOME}/lagvm/LINUX/android"
+    export JAVA_HOME="${WORKSPACE_HOME}/release/gradle/JDK/jbr/"
+    export ANDROID_HOME="${WORKSPACE_HOME}/release/gradle/SDK/"
+    export PATH="${JAVA_HOME}/bin:$PATH"
+
+    alias go_android="cd ${WORKSPACE_ANDROID_HOME}"
+    alias envsetup="cd ${WORKSPACE_ANDROID_HOME} && source build/envsetup.sh"
+else
+    export WORKSPACE_PRODUCT_ALIAS="test"
+    export ANDROID_SERIAL="db1aec47"
+    export WORKSPACE_ADB_PERMISSIVE=false
+
+    alias adb_monitoring="adb_device_full_monitoring"
+fi
