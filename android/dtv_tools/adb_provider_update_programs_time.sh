@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
-source common_bash.sh
-DEBUG_COMMON_BASH=false;
-DEBUG=false;
-TV_DB="/data/data/com.android.providers.tv/databases/tv.db"
-QUERY_COMMAND="adb shell sqlite3 ${TV_DB}\""
-
-PKG="${WORKSPACE_DTVINPUT_PACKAGE}";
-UPDATED_VERSION="version_number=100"
-
-LIMIT_RECORDS=10000;
+source common_dtv.sh
 
 function deleteUpdatedPrograms() {
     log -w "delete all programs these were updated by manually (${UPDATED_VERSION})"

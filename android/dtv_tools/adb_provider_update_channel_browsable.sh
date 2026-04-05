@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 
-source common_bash.sh
-DEBUG_COMMON_BASH=false
-DEBUG=false
-TV_DB="/data/data/com.android.providers.tv/databases/tv.db"
-
-PKG="${WORKSPACE_DTVINPUT_PACKAGE}";
-URI_CHANNEL="content://android.media.tv/channel"
-
-LIMIT_RECORDS=10000
+source common_dtv.sh
 
 function updateBrowsableByTP() {
     local TP

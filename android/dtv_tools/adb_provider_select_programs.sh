@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
 
-source common_bash.sh
-DEBUG_COMMON_BASH=false;
-DEBUG=true;
-TV_DB="/data/data/com.android.providers.tv/databases/tv.db"
-QUERY_COMMAND="adb shell sqlite3 ${TV_DB}\""
-
-PKG="${WORKSPACE_DTVINPUT_PACKAGE}";
-TV_DB="/data/data/com.android.providers.tv/databases/tv.db"
-SQL_OPT="-header -column"
-
-LIMIT_RECORDS=10000;
+source common_dtv.sh
 
 function query_program_by_channels() {
     local projections="programs._id as programs_id, channels._id as channels_id, channels.display_number, channels.transport_stream_id as TP, channels.display_name, programs.title, programs.content_rating"

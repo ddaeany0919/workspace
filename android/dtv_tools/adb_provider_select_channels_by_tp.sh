@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
-source common_bash.sh
-DEBUG_COMMON_BASH=false;
-DEBUG=true;
-TV_DB="/data/data/com.android.providers.tv/databases/tv.db"
-
-PKG="${WORKSPACE_DTVINPUT_PACKAGE}";
-URI_CHANNEL="--uri content://android.media.tv/channel"
-
-LIMIT_RECORDS=10000;
-DEFAULT_TP=13
+source common_dtv.sh
 
 function selectChannelListByTP() {
     # local fields="_id, display_number, display_name, transport_stream_id"
