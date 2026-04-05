@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # [AI-Insight: Autonomous Swarm Edition]
-# bkit v3.0 초고성능 연산 엔진
+# Gemini v3.0 초고성능 연산 엔진
 source common_bash.sh
 
 # 기능을 극대화한 고효율 덧셈 엔진

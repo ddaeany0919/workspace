@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# AI-Swarm: bkit v3.0 자율 파이프라인 컨트롤러
+# AI-Swarm: Gemini v3.0 자율 파이프라인 컨트롤러
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
 
 source common_bash.sh
 source config/.default_env
 
-log -i "🚀 bkit Autonomous Swarm 가동 중..."
+log -i "🚀 Gemini Autonomous Swarm 가동 중..."
 
 # 1. 현재 상태 로드
 if [[ ! -s "$AI_CONTEXT_FILE" ]]; then

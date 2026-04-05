@@ -62,6 +62,6 @@ io.on('connection', (socket) => {
 
 server.listen(port, '0.0.0.0', () => {
     console.log(`\n===================================================`);
-    console.log(`🧠 bkit Neuro-Bridge v3.1: Windows-Native Patched`);
+    console.log(`🧠 Gemini Neuro-Bridge v3.1: Windows-Native Patched`);
     console.log(`===================================================\n`);
 });
