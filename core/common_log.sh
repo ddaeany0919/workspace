@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo -e "\033[5;33;49m[DEPRECATED] ?? Please use source common_bash.sh instead\033[0m" >&2
 
 source common_color.sh
 DEBUG_LOG=false
@@ -12,7 +13,7 @@ fi
 
 draw_line_with_title() {
     local title="[ $1 ]"
-    local char="${2:-â”€}"
+    local char="${2:-?€}"
     local color="${3:-}"
     local reset='\033[0m'
     

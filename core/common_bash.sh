@@ -28,10 +28,10 @@ function print_prefix_color() {
     printf -v currentTime '%(%m-%d %H:%M:%S)T' -1
 
     case "$log_option" in
-        "-d") [[ "$DEBUG" == "true" ]] && echo -e "${currentTime} ðŸ•µï¸\t\033[0;36;49m${log_message}\033[0m" > "$term" ;;
-        "-i") echo -e "${currentTime} ðŸ’¡\t\033[0;32;49m${log_message}\033[0m" > "$term" ;;
-        "-w") echo -e "${currentTime} âš ï¸\t\033[5;31;49m${log_message}\033[0m" > "$term" ;;
-        "-e") echo -e "${currentTime} ðŸ‘¾\t\033[5;33;49m${log_message}\033[0m" > "$term" ;;
+        "-d") [[ "$DEBUG" == "true" ]] && echo -e "${currentTime} ?•µï¸?t\033[0;36;49m${log_message}\033[0m" > "$term" ;;
+        "-i") echo -e "${currentTime} ?’¡\t\033[0;32;49m${log_message}\033[0m" > "$term" ;;
+        "-w") echo -e "${currentTime} ? ï¸\t\033[5;31;49m${log_message}\033[0m" > "$term" ;;
+        "-e") echo -e "${currentTime} ?‘¾\t\033[5;33;49m${log_message}\033[0m" > "$term" ;;
         "-q") echo -e "${currentTime} \033[1;94;100mQUIET\033[0m\t$log_message" > "$term" ;;
         "-n") echo -e "\t$log_message" > "$term" ;;
         *)    echo -e "${currentTime} \033[0;37;49m\t$log_message\033[0m" > "$term" ;;
@@ -59,7 +59,7 @@ function draw_line() {
 
 function draw_line_with_title() {
     local title="[ $1 ]"
-    local char="${2:-â”€}"
+    local char="${2:-?€}"
     local color="${3:-}"
     local reset='\033[0m'
     local total_width=$(tput cols 2>/dev/null || echo 80)
@@ -99,35 +99,3 @@ function do_execute() {
     return "$result"
 }
 
-# ==========================================
-# 4. Project Utilities (Integrated)
-# ==========================================
-function adb_power_state_monitoring() {
-    local powerState="" pState pStateReadable
-    while adb_is_connected; do
-        pState=$(adb shell dumpsys mobispower 2>/dev/null | grep "mState" | cut -d":" -f2 | tr -d ' ')
-        [[ -z "$pState" ]] && break
-        if [[ "$pState" != "$powerState" ]]; then
-            case $pState in
-                0) pStateReadable="STATE_NORMAL(0)" ;; 1) pStateReadable="STATE_WELCOME(1)" ;;
-                2) pStateReadable="STATE_ADM(2)" ;;    3) pStateReadable="STATE_WAIT_DOOR_OPEN(3)" ;;
-                4) pStateReadable="STATE_GOODBYE(4)" ;; 5) pStateReadable="STATE_LOGIC_OFF(5)" ;;
-                6) pStateReadable="STATE_RMT_ENG(6)" ;; 7) pStateReadable="STATE_PRE_SYSTEM_OFF(7)" ;;
-                8) pStateReadable="STATE_SYSTEM_OFF(8)" ;; 9) pStateReadable="STATE_POST_SYSTEM_OFF(9)" ;;
-                *) pStateReadable="unknown($pState)" ;;
-            esac
-            log -i "Power state changed: $pStateReadable"; powerState="$pState"
-        fi
-        sleep 1
-    done
-}
-
-function adb_device_full_monitoring() {
-    while true; do
-        draw_line_with_title "Waiting for device" "-" "${COLOR_RED}"
-        adb_wait-for-device && adb_connect -r && adb_time_set
-        adb_power_state_monitoring
-        draw_line_with_title "Device disconnected" "-" "${COLOR_YELLOW}"
-        adb wait-for-disconnect 2>/dev/null
-    done
-}

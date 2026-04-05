@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo -e "\033[5;33;49m[DEPRECATED] ?? Please use source common_bash.sh instead\033[0m" >&2
 
 source common_log.sh
 
